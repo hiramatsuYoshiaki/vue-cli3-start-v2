@@ -1,5 +1,5 @@
 
-<img width="600" height="400"src='https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition/blob/master/docs/img/h-works1200x600black.7ab65215.svg'>
+<img width=600 height=400  src='https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition/blob/master/docs/img/h-works1200x600black.7ab65215.svg'>
 # シームレス　ページ　トランジション　Seamless Page Transition
  ![h-works](https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition/blob/master/docs/img/fuji1.0864f0fb.jpg "h-works")
  
