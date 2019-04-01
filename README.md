@@ -1,14 +1,11 @@
+https://hiramatsuyoshiaki.github.io/vue-cli3-page-transition/img/h-works1200x600white.a5e93905.svg
 # シームレス　ページ　トランジション　Seamless Page Transition
 
 このリポジトリは、シームレスなページ遷移を行うウェブサイトを作る、 
 スターターテンプレートです。 
 
-# シームレス　ページ　トランジション　Seamless Page Transition
-
-このリポジトリは、シームレスなページ遷移を行うウェブサイトを作る、 
-スターターテンプレートです。
-
 # Dependency
+
 使用言語とバージョン、必要なライブラリとそのバージョンを書く
 Pythonならrequirements.txtを用意するのも良い
 
