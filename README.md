@@ -1,6 +1,8 @@
 
+<img src='https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition/blob/master/docs/img/h-works1200x600black.7ab65215.svg'>
 # シームレス　ページ　トランジション　Seamless Page Transition
  ![h-works](https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition/blob/master/docs/img/fuji1.0864f0fb.jpg "h-works")
+ 
 このリポジトリは、シームレスなページ遷移を行うウェブサイトを作る、 
 スターターテンプレートです。 
 https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition
