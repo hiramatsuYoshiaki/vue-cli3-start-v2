@@ -1,10 +1,10 @@
 
 <img width=300 height=200  src='https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition/blob/master/docs/img/h-works1200x600black.7ab65215.svg'>
-# シームレス　ページ　トランジション　Seamless Page Transition
+# Seamless Page Transition 
 Seamless Page Transitionは、シームレスなページ遷移を実装するために、テストケースとして作成したデモンストレーションサイトです。
-<img width=600 height=400  src='https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition/blob/master/docs/img/page-tran-test1.gif'>
+<img width=600 height=400  src='https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition/blob/master/docs/img/page-tran-test1.page-tran-test1.32bd832b.gif'>
 
- ![Seamless Page Transition](https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition/blob/master/docs/img/page-tran-test1.gif "Seamless Page Transition")
+ ![Seamless Page Transition](https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition/blob/master/docs/img/page-tran-test1.page-tran-test1.32bd832b.gif "Seamless Page Transition")
  
 
 # Dependency

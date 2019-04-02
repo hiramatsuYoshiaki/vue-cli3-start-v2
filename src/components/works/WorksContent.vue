@@ -202,10 +202,7 @@
             </div> -->
             
         </div>
-        
-                  
       </transition>
-     
     </main>
     <FooterBar  msg="footerBar"
                   navMenu="prpject"
