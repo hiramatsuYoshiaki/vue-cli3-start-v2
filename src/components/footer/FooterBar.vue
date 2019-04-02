@@ -1,10 +1,13 @@
 <template>
-  <div class="footerBar ">
+  <div class="footerBar " >
     <div class="footerBar-Wrap" >
       <div class="footer-top" v-if="footerTop">
         <a v-on:click="link_commit('home', '/')" class="menu_link" >
               <img v-bind:src="logoSvgHWorksWhite" alt="h-works logo">
         </a>
+      </div>
+      <div class="footer-sepalater" v-if="footerSepalater">
+        <div class="line"></div>
       </div>
       <nav class="footer-menu" v-if="footerMenu">
           <div class="m-menu-wrap  ">
@@ -44,16 +47,17 @@
             </div>
           </div>
       </nav>
-      <div class="footer-sepalater" v-if="footerSepalater">
-        <div class="line"></div>
-      </div>
+      
       <div class="footer-bottom" v-if="footerBottom" >
         <div class="footer-bottom-wrap">
             <div class="copy-light">© 2018 h-works. All Rights Reserved</div>
-            <div>Terms of Use</div>
+            <!-- <div>Terms of Use</div>
             <div>Privacy Policy</div>
             <div>Disclaimer</div>
-            <div>Imprint</div>
+            <div>Imprint</div> -->
+            <a href="#top">
+              <div>TOP</div>
+            </a>
           </div>
       </div>
     </div> 

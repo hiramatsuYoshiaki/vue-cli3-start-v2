@@ -36,7 +36,7 @@
                         <div class="altanative-wrap" v-bind:class="{'altanative-wrap-right' : !sec1Select }" >
                           <div class="image-group-right" v-if="!isHidden || sec1Select"
                               v-bind:class="{fullScreenImageLeft: sec1Select}" >
-                            <div class="img-wrap" v-on:click="scrollTopSec1()"
+                            <div class="img-wrap" v-on:click="scrollTopSec1()" 
                                 v-bind:style="{ 'background-image' : 'url(' + contents[1].imgURL + ')' }">
                             </div>
                           </div>
@@ -468,6 +468,14 @@ width: 100%;
 }
  
 @keyframes trnLeft{
+  0% {
+    top: 50%;
+    right: 0%;
+    width: 80%;
+    height: 66.6%;
+    transform: translate(0, -50%);
+    margin-top: calc( #{$section-block-height}  / 2);
+    }
   60% {
     top: 0%;
     left: 0%;

@@ -10,12 +10,12 @@
           </div>
           <div class="transition-box">
             <transition name="carousel-pop-up" appear>
-            <p>HEADER TITLE</p>
+            <p>Seamless Page Transition</p>
             </transition>
           </div>
           <div class="transition-box">
             <transition name="carousel-pop-up" appear>
-            <p>path:/about </p>
+            <p>使い方について </p>
             </transition>
           </div>
         </section>
@@ -23,7 +23,6 @@
 
       <transition name="mainCon" appear>
         <div  class="main-content">
-            <!-- col2-content title  1111111111111111111111111111-->
             <div class="col2-content">
               <div class="col-block left-block">
                 <div class="section-block caption-section">
@@ -38,18 +37,18 @@
               </div>
               <div class="col-block right-block">
                 <div class="section-block image-section">
-                  <!-- <div v-for="(h1RightArrey, index ) in h1RightArreys " :key="index">
+                  <div v-for="(h1RightArrey, index ) in h1RightArreys " :key="index">
                     <div class="transition-box" >
                       <transition v-bind:name="h1RightArrey.tName" appear>
                         <div><h1 v-bind:style="{color: h1RightArrey.tColor}">{{h1RightArrey.tText}}</h1></div>
                       </transition>
                     </div>
-                  </div> -->
+                  </div>
                 </div>
               </div>
             </div>
-<!-- about team aboutaboutaboutaboutaboutaboutaboutabout -->
-            <div class="card-content">
+            <!-- about team aboutaboutaboutaboutaboutaboutaboutabout -->
+            <!-- <div class="card-content">
               <div class="card-section card-row">
                 <div class="card-container col2-block" v-for=" (cardData, index) in cardDatas" v-bind:key="index">
                   
@@ -73,15 +72,9 @@
 
                 </div>
               </div>
-            </div>
-            
-             
-              
-            
-
+            </div> -->
             <!-- image component alternation 1111111111111111111111111111-->
-            
-            <div class="alternationImage-content alternation-row">
+            <!-- <div class="alternationImage-content alternation-row">
               <div class="col-block text-block">
                 <div id="img1Captionblock" class="section-block caption-section">
                  
@@ -141,18 +134,12 @@
                   <transition name="rippleRight" >
                     <img v-bind:src="imgURL1" v-if="MaxScrollY > img1Imageblock"  alt="img1">
                   </transition>
-                  <!-- <transition name="rippleRight" >
-                    <div class="image-filter image-filter-right" v-if="MaxScrollY > img1Imageblock">
-                      <img v-bind:src="imgURL1">
-                    </div>
-                  </transition> -->
                 </div>
               </div>
               
-            </div>
-
+            </div> -->
             <!-- col2-content title  222222222222222-->
-            <div class="col2-content">
+            <!-- <div class="col2-content">
               <div class="col-block left-block">
                 <div class="section-block caption-section">
 
@@ -163,11 +150,6 @@
                       </transition>
                     </div>
                   </div>
-                  <!-- <div class="transiton-box ">
-                    <transition name="carousel-pop-up" appear>
-                      <p>Alprime Capital AG (“Alprime”) is a Swiss investment boutique focusing on alternative investments. It was approved as an asset manager of collective investment schemes by the Swiss Financial Market Supervisory Authority (FINMA) in summer 2018. Alprime was established in Baar (Canton Zug/Switzerland) as a spin-off from Progressive Capital Partners Ltd in April 2018. Alprime is owned entirely by its co-founders who also manage the company.</p>
-                    </transition>
-                  </div>-->
                 </div>
               </div>
               <div class="col-block right-block">
@@ -183,10 +165,9 @@
                   
                 </div>
               </div>
-            </div>
-
+            </div> -->
             <!-- image component alternation 222222222222222222222222222222222-->
-            <div class="alternationImage-content alternation-revers">
+            <!-- <div class="alternationImage-content alternation-revers">
               <div id="img2Captionblock" class="col-block text-block">
                 <div  class="section-block caption-section ">
                   <div class="caption-group caption-group-left">
@@ -233,11 +214,6 @@
               </div>
               <div id="img2Imageblock" class="col-block image-block ">
                  <div class="image-section-block  image-section image-left">
-
-                  <!-- <transition name="rippleLeft" >
-                    <img v-bind:src="imgURL2" v-if="MaxScrollY > img2Imageblock"  alt="img2">
-                  </transition> -->
-
                   <transition name="box-shadow-moveLeft" >
                     <div class="box-shadow box-shadow-left" v-if="MaxScrollY > img2Imageblock">
                       <img v-bind:src="imgURL2" >
@@ -246,14 +222,9 @@
                   <transition name="rippleLeft" >
                     <img v-bind:src="imgURL2" v-if="MaxScrollY > img2Imageblock"  alt="img2">
                   </transition>
-                  <!-- <transition name="rippleLeft" >
-                    <div class="image-filter image-filter-left" v-if="scrollY > img2Imageblock">
-                      <img v-bind:src="imgURL2">
-                    </div>
-                  </transition> -->
                 </div>
               </div>
-            </div>
+            </div> -->
 
         </div>
       </transition>

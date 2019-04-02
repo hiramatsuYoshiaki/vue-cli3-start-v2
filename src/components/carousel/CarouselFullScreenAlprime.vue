@@ -70,12 +70,18 @@
                   <div class="link-position">
                     <div class="transiton-box ">
                       <transition name="carousel-pop-up" appear>
+                        <p>シームレスなページ遷移のデモ</p>
+                      </transition>
+                    </div>
+                    <div class="transiton-box ">
+                      <transition name="carousel-pop-up" appear>
                         <h1>{{content.titel }}</h1>
                       </transition>
                     </div>
                     <div class="transiton-box ">
                       <transition name="carousel-pop-up" appear>
-                      <p>{{content.detail }}</p>
+                      <!-- <p>{{content.detail }}</p> -->
+                      <p>クリックしてボーダレスなページ移動を確認ください。</p>
                       </transition>
                     </div>
 
@@ -169,19 +175,10 @@
         arr_interval: [],
         
         contents: [
-            // {
-            //   id:0,
-            //   title: 'img1',
-            //   bg_color: '#7bbff9',
-            //   imgURL: require("../../assets/img/img1578.jpg"),
-            //   titel: 'TOKYO STATION ',
-            //   detail: 'MARUNOUCHI',
-            //   link: 'home',
-            //   link_path: '/',
-            // },
+            
             {
               id:0,
-              title: 'img2',
+              title: 'img1',
               bg_color: '#f16972',
               imgURL: require("../../assets/img/fuji1.jpg"),
               titel: 'WORKS CONTENT',
@@ -191,6 +188,16 @@
             },
             {
               id:1,
+              title: 'img2',
+              bg_color: '#7bbff9',
+              imgURL: require("../../assets/img/img2722.jpg"),
+              titel: 'PROJECTS CONTENT',
+              detail: 'path:/projects',
+              link: 'projects',
+              link_path: '/projects',
+            },
+            {
+              id:2,
               title: 'img3',
               bg_color: '#f16972',
               imgURL: require("../../assets/img/img4130b.jpg"),
@@ -200,7 +207,7 @@
               link_path: '/about',
             },
             {
-              id:2,
+              id:3,
               title: 'img4',
               bg_color: '#20d2d3',
               imgURL: require("../../assets/img/img3668.jpg"),

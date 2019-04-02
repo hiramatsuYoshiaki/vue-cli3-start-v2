@@ -3,7 +3,7 @@
                          scroll: headerScrollType ,
                          fixed: headerFixedType ,
                          fadeOut: isScroll && headerStikyType }"> -->
-  <div class="headerBar " v-bind:class="{
+  <div id="Top" class="headerBar " v-bind:class="{
                          scroll: headerFixedType ,
                          fixed: headerFixedType ,
                          fadeOut: isScroll && headerStikyType }">

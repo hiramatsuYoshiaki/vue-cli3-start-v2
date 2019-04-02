@@ -10,21 +10,19 @@
           </div>
           <div class="transition-box">
             <transition name="carousel-pop-up" appear>
-            <p>HEADER TITLE</p>
+            <p>Seamless Page Transition</p>
             </transition>
           </div>
           <div class="transition-box">
             <transition name="carousel-pop-up" appear>
-            <p>path:/works </p>
+            <p>概要</p>
             </transition>
           </div>
         </section>
       </div>
+      
       <transition name="mainCon" appear>
         <div  class="main-content" >
-          
-            <!-- <HistorySection msg="massage history section" pageView="works"/> -->
-
             <div class="col2-content">
               <div class="col-block left-block">
                 <div class="section-block caption-section">
@@ -52,7 +50,7 @@
                 </div>
               </div>
             </div>
-            <div class="alternationImage-content alternation-row">
+            <!-- <div class="alternationImage-content alternation-row">
               <div class="col-block text-block">
                 <div id="img1Captionblock" class="section-block caption-section">
                  
@@ -115,8 +113,8 @@
                  
                 </div>
               </div>
-            </div>
-            <div class="col2-content">
+            </div> -->
+            <!-- <div class="col2-content">
               <div class="col-block left-block">
                 <div class="section-block caption-section">
 
@@ -143,8 +141,8 @@
                   
                 </div>
               </div>
-            </div>
-            <div class="alternationImage-content alternation-revers">
+            </div> -->
+            <!-- <div class="alternationImage-content alternation-revers">
               <div id="img2Captionblock" class="col-block text-block">
                 <div  class="section-block caption-section ">
                   <div class="caption-group caption-group-left">
@@ -201,17 +199,21 @@
                   </transition>
                 </div>
               </div>
-            </div>
+            </div> -->
+            
         </div>
-        <!-- <FooterBar  msg="footerBar"
+        
+                  
+      </transition>
+     
+    </main>
+    <FooterBar  msg="footerBar"
                   navMenu="prpject"
                   v-bind:footerTop= "true"
                   v-bind:footerBottom= "true"
                   v-bind:footerMenu= "true"
                   v-bind:footerSepalater= "true"
-                  /> -->
-      </transition>
-    </main>
+                  />
   </div>
 </template>
 
@@ -230,7 +232,8 @@ export default {
   },
      data () {
       return {
-        imgURL1: require("../../assets/img/img1578.jpg"),
+        // imgURL1: require("../../assets/img/img1578.jpg"),
+        imgURL1: require("../../assets/img/page-tran-test1.gif"),
         imgURL2: require("../../assets/img/fuji1.jpg"),
         imgURL3: require("../../assets/img/img4130b.jpg"),
         imgURL4: require("../../assets/img/img3668.jpg"),
@@ -250,20 +253,21 @@ export default {
 
         h1LeftArreys:[
           {tName: "carousel-pop-up1", 
-           tText: "Alprime Capital AG (“Alprime”) is a Swiss investment boutique focusing on alternative investments. It was approved as an asset manager of collective investment schemes by the Swiss Financial Market Supervisory Authority (FINMA) in summer 2018. Alprime was established in Baar (Canton Zug/Switzerland) as a spin-off from Progressive Capital Partners Ltd in April 2018. Alprime is owned entirely by its co-founders who also manage the company."
-           , tColor:"rgba(0,0,0,.6)" },
+           tText: 
+           "Seamless Page Transitionは、シームレスなページ遷移を実装するために、テストケースとして作成したデモンストレーションサイトです。"
+           , tColor:"rgba(0,0,0,.8)" },
           {tName: "carousel-pop-up2",  tText:
-           "At Alprime our aim is to provide uncorrelated investment products with stable asset growth. We are convinced that our product offering provides a valuable addition to every portfolio."
+           "ランディングページのカルーセルは、訪問者を退屈させません。その、リンクをクリックし、目的とするページへの遷移は、シームレスに行われます。訪問者は、アニメーションを気にしている瞬間に、次のページにたどり着いています。"
             , tColor:"rgba(0,0,0,.6)"},
           {tName: "carousel-pop-up3",  tText:
-           "It is our ambition to accept the challenges of changing market environments. We are constantly striving to find new and innovative ways to put our funds to work and to differentiate ourselves from other market players in order to achieve better results for our clients. Our risk management is essential in everything we do since the trust of our clients is the most important asset we have."
+           "このウェブサイトは、シームレスなページ遷移を実装する、スターターテンプレートとして開発することを目的としました。Vue.jsを使いコンポーネントを、できるだけ使いやすく再利用できることをめざし、試行錯誤しています。ただ、これは完成されたものではありません、あくまで試作品であり、スキル習得のためのステップにすぎません。"
             , tColor:"rgba(0,0,0,.6)"},
         ],
         h1RightArreys:[
-          {tName: "carousel-pop-up1",  tText: "At Alprime our mission", tColor:"rgba(0,0,0,.6)" },
-          {tName: "carousel-pop-up2",  tText: "is offering true alternatives", tColor:"rgba(0,0,40,1)" },
-          {tName: "carousel-pop-up3",  tText: "to traditional investments", tColor:"rgba(0,0,40,1)" },
-          {tName: "carousel-pop-up4",  tText: "by thinking outside the box.", tColor:"rgba(0,0,0,.6)" },
+          {tName: "carousel-pop-up1",  tText: "このシームレスなページ遷移の", tColor:"rgba(0,0,0,.6)" },
+          {tName: "carousel-pop-up2",  tText: "デモンストレーションサイトは、", tColor:"rgba(0,0,40,1)" },
+          {tName: "carousel-pop-up3",  tText: "できるだけ使いやすく再利用できる", tColor:"rgba(0,0,40,1)" },
+          {tName: "carousel-pop-up4",  tText: "スターターテンプレートの試作段階です。", tColor:"rgba(0,0,0,.6)" },
         ],
 
         img1Arreys:[
@@ -393,11 +397,9 @@ main{
   padding: 2rem;
 }
 .transition-box{
-  // border: 1px solid red;
   width: 100%;
   overflow: hidden;
   margin-bottom: 0.5rem;
-  // cursor: pointer;
 }
 .main-header h1,  .main-header p{
   color: $header-text;
