@@ -10,7 +10,7 @@
           </div>
           <div class="transition-box">
             <transition name="carousel-pop-up" appear>
-            <p>Seamless Page Transition</p>
+            <p>Seamless Page Transition Demo</p>
             </transition>
           </div>
           <div class="transition-box">
@@ -23,6 +23,7 @@
       
       <transition name="mainCon" appear>
         <div  class="main-content" >
+
             <div class="col2-content">
               <div class="col-block left-block">
                 <div class="section-block caption-section">
@@ -50,156 +51,7 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="alternationImage-content alternation-row">
-              <div class="col-block text-block">
-                <div id="img1Captionblock" class="section-block caption-section">
-                 
-                  <div class="caption-group caption-group-right" v-if="page==='works'">
-                    <div v-for="(img1Arrey, index ) in img1Arreys " :key="index">
-                      <div class="transition-box" >
-                        <transition v-bind:name="img1Arrey.tName" >
-                            <h2 v-if="MaxScrollY > img1Captionblock"
-                                v-bind:style="{color: img1Arrey.tColor}"  >
-                              {{img1Arrey.tText}}
-                            </h2>
-                        </transition>
-                      </div>
-                    </div>
-                    <div class="link-group">
-                      <div class="link-unit">
-                        <transition name="link-lineMotion-works" >
-                          <div class="link-nextPage" v-if="MaxScrollY > img1Captionblock">
-                              <a v-on:click="link_commit('about', '/about')" >
-                                <div class="next-text">
-                                    ABOUT
-                                </div>
-                              </a>
-                              <a v-on:click="link_commit('about', '/about')" >
-                                <div class="link-arrow" >
-                                  <svg width="60" height="60" >
-                                    <line x1="0" y1="30" x2="60" y2="30"  />
-                                    <polygon  points="56,26 56,34 60,30"/>
-                                  </svg>
-                                </div>
-                              </a>
-                              <a v-on:click="link_commit('about', '/about')" >
-                                <div class="link-circle" >
-                                  <svg width="60" height="60">
-                                    <circle cx="30" cy="30" r="24" />
-                                  </svg> 
-                                </div>
-                              </a>
-                          </div>
-                        </transition>
-                      </div>
-                    </div>
-                  
-                  </div>
 
-                </div>
-              </div>
-              
-              <div id="img1Imageblock" class="col-block image-block ">
-                 <div class="image-section-block  image-section image-right" >
-                  
-                  <transition name="box-shadow-moveRight" >
-                    <div class="box-shadow box-shadow-right" v-if="MaxScrollY > img1Imageblock">
-                      <img v-bind:src="imgURL1" >
-                    </div>
-                  </transition>
-                  <transition name="rippleRight" >
-                    <img v-bind:src="imgURL1" v-if="MaxScrollY > img1Imageblock"  alt="img1">
-                  </transition>
-                 
-                </div>
-              </div>
-            </div> -->
-            <!-- <div class="col2-content">
-              <div class="col-block left-block">
-                <div class="section-block caption-section">
-
-                  <div v-for="(h1LeftArrey, index) in h1LeftArreys " :key="index">
-                    <div class="transition-box" >
-                      <transition v-bind:name="h1LeftArrey.tName" appear>
-                        <div><p v-bind:style="{color: h1LeftArrey.tColor}">{{h1LeftArrey.tText}}</p></div>
-                      </transition>
-                    </div>
-                  </div>
-                 
-                </div>
-              </div>
-              <div class="col-block right-block">
-                <div class="section-block image-section">
-
-                  <div v-for="(h1RightArrey, index ) in h1RightArreys " :key="index">
-                    <div class="transition-box" >
-                      <transition v-bind:name="h1RightArrey.tName" appear>
-                        <div><h1 v-bind:style="{color: h1RightArrey.tColor}">{{h1RightArrey.tText}}</h1></div>
-                      </transition>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-            </div> -->
-            <!-- <div class="alternationImage-content alternation-revers">
-              <div id="img2Captionblock" class="col-block text-block">
-                <div  class="section-block caption-section ">
-                  <div class="caption-group caption-group-left">
-                    <div  v-for="(img2Arrey, index ) in img2Arreys " :key="index">
-                      <div class="transition-box" >
-                        <transition v-bind:name="img2Arrey.tName" >
-                            <h2 v-if="MaxScrollY > img2Captionblock" 
-                              v-bind:style="{color: img2Arrey.tColor}">
-                              {{img2Arrey.tText}}
-                            </h2>
-                        </transition>
-                      </div>
-                    </div>
-                    <div class="link-group">
-                      <div class="link-unit">
-                        <transition name="link-lineMotion-works" >
-                          <div class="link-nextPage" v-if="MaxScrollY > img2Captionblock">
-                              <a v-on:click="link_commit('contact', '/contact')" >
-                                <div class="next-text">
-                                    Contact
-                                </div>
-                              </a>
-                              <a v-on:click="link_commit('contact', '/contact')" >
-                                <div class="link-arrow" >
-                                  <svg width="60" height="60" >
-                                    <line x1="0" y1="30" x2="60" y2="30"  />
-                                    <polygon  points="56,26 56,34 60,30"/>
-                                  </svg>
-                                </div>
-                              </a>
-                              <a v-on:click="link_commit('contact', '/contact')" >
-                                <div class="link-circle" >
-                                  <svg width="60" height="60">
-                                    <circle cx="30" cy="30" r="24" />
-                                  </svg> 
-                                </div>
-                              </a>
-                          </div>
-                        </transition>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="img2Imageblock" class="col-block image-block ">
-                 <div class="image-section-block  image-section image-left">
-                  <transition name="box-shadow-moveLeft" >
-                    <div class="box-shadow box-shadow-left" v-if="MaxScrollY > img2Imageblock">
-                      <img v-bind:src="imgURL2" >
-                    </div>
-                  </transition>
-                  <transition name="rippleLeft" >
-                    <img v-bind:src="imgURL2" v-if="MaxScrollY > img2Imageblock"  alt="img2">
-                  </transition>
-                </div>
-              </div>
-            </div> -->
             
         </div>
       </transition>
@@ -252,19 +104,19 @@ export default {
           {tName: "carousel-pop-up1", 
            tText: 
            "Seamless Page Transitionは、シームレスなページ遷移を実装するために、テストケースとして作成したデモンストレーションサイトです。"
-           , tColor:"rgba(0,0,0,.8)" },
+           , tColor:"rgba(0,0,0,1)" },
           {tName: "carousel-pop-up2",  tText:
-           "ランディングページのカルーセルは、訪問者を退屈させません。その、リンクをクリックし、目的とするページへの遷移は、シームレスに行われます。訪問者は、アニメーションを気にしている瞬間に、次のページにたどり着いています。"
-            , tColor:"rgba(0,0,0,.6)"},
+           "ランディングページのカルーセルは、訪問者を退屈させません。その、リンクをクリックし、目的とするページへの遷移は、シームレスに行われます。訪問者は、アニメーションを気にしている瞬間に、次のページに到達しています。"
+            , tColor:"rgba(0,0,0,1)"},
           {tName: "carousel-pop-up3",  tText:
            "このウェブサイトは、シームレスなページ遷移を実装する、スターターテンプレートとして開発することを目的としました。Vue.jsを使いコンポーネントを、できるだけ使いやすく再利用できることをめざし、試行錯誤しています。ただ、これは完成されたものではありません、あくまで試作品であり、スキル習得のためのステップにすぎません。"
             , tColor:"rgba(0,0,0,.6)"},
         ],
         h1RightArreys:[
-          {tName: "carousel-pop-up1",  tText: "このシームレスなページ遷移の", tColor:"rgba(0,0,0,.6)" },
-          {tName: "carousel-pop-up2",  tText: "デモンストレーションサイトは、", tColor:"rgba(0,0,40,1)" },
-          {tName: "carousel-pop-up3",  tText: "できるだけ使いやすく再利用できる", tColor:"rgba(0,0,40,1)" },
-          {tName: "carousel-pop-up4",  tText: "スターターテンプレートの試作段階です。", tColor:"rgba(0,0,0,.6)" },
+          {tName: "carousel-pop-up1",  tText: "ランディングページより", tColor:"rgba(0,0,0,.6)" },
+          {tName: "carousel-pop-up2",  tText: "シームレスに", tColor:"rgba(0,0,0,1)" },
+          {tName: "carousel-pop-up3",  tText: "訪問者の行きたい", tColor:"rgba(0,0,0,.6)" },
+          {tName: "carousel-pop-up4",  tText: "情報へ遷移します。", tColor:"rgba(0,0,0,.6)" },
         ],
 
         img1Arreys:[
@@ -467,6 +319,7 @@ main{
     padding: 6rem 0 6rem 12rem ;
   } 
 }
+
 .image-section-block{
   position: relative;
   @media (min-width: 992px){

@@ -10,12 +10,12 @@
           </div>
           <div class="transition-box">
             <transition name="carousel-pop-up" appear>
-            <p>Seamless Page Transition</p>
+            <p>Seamless Page Transition Demo</p>
             </transition>
           </div>
           <div class="transition-box">
             <transition name="carousel-pop-up" appear>
-            <p>使い方について </p>
+            <p>GitHubを使う </p>
             </transition>
           </div>
         </section>
@@ -26,13 +26,52 @@
             <div class="col2-content">
               <div class="col-block left-block">
                 <div class="section-block caption-section">
-                  <div v-for="(h1LeftArrey, index) in h1LeftArreys " :key="index">
+                  <!-- <div v-for="(h1LeftArrey, index) in h1LeftArreys " :key="index">
                     <div class="transition-box" >
                       <transition v-bind:name="h1LeftArrey.tName" appear>
                         <div><p v-bind:style="{color: h1LeftArrey.tColor}">{{h1LeftArrey.tText}}</p></div>
                       </transition>
                     </div>
-                  </div>
+                  </div> -->
+                    <div class="transition-box" >
+                      <transition name="carousel-pop-up1" appear>
+                        <div>
+                          <p>Seamless Page Transitionは、シームレスなページ遷移を実装する、スターターテンプレートとして開発することを目的としました。再利用できるようにGitHubで共有しました。</p>
+                        </div>
+                      </transition>
+                    </div>
+                    <div class="transition-box" >
+                      <transition name="carousel-pop-up2" appear>
+                        <div>
+                          <p>このサイトは、GitHub Pagesに公開されています。詳細については、README.mdを見てください。</p>
+                        </div>
+                      </transition>
+                    </div>
+                    
+                   
+                    <div class="link-text">
+                        <a href="https://hiramatsuyoshiaki.github.io/vue-cli3-page-transition/" > 
+                          <div class="transition-box" >
+                            <transition name="carousel-pop-up4" appear>
+                              <div>
+                                <p><i class="fab fa-github"></i><span>GitHub Repository</span></p>
+                                <p>hiramatsuYoshiaki/vue-cli3-page-transition</p>
+                                <p>URL: https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition</p>
+                              </div>
+                              </transition>
+                          </div>
+                        </a>
+                    </div>
+                   
+                    <div class="transition-box" >
+                      <transition name="carousel-pop-up3" appear>
+                        <div class="text-color-gray">
+                          <p>このサイトをGitHubで共有することで、Git,GitHubスキル習得を目的としています。</p>
+                        </div>
+                      </transition>
+                    </div>
+                   
+                    
                 </div>
               </div>
               <div class="col-block right-block">
@@ -47,185 +86,6 @@
                 </div>
               </div>
             </div>
-            <!-- about team aboutaboutaboutaboutaboutaboutaboutabout -->
-            <!-- <div class="card-content">
-              <div class="card-section card-row">
-                <div class="card-container col2-block" v-for=" (cardData, index) in cardDatas" v-bind:key="index">
-                  
-                  <div v-bind:id="cardData.id" class="card-wrap" v-bind:class="{cardMarginTop: !(index % 2 == 0) }" >
-                    <transition name="spinX3d">
-                      <div class="image-box" v-if="MaxScrollY > cardSectionPosition[index]">
-                        <img v-bind:src="cardData.img" >
-                      </div>
-                    </transition>
-                    <div class="subscription-box">
-                      <div class="subscription-wrap">
-                        <transition name="spinX3d">
-                        <div class="title" v-if="MaxScrollY > cardSectionPosition[index]">{{cardData.title}}</div>
-                        </transition>
-                        <transition name="spinX3d">
-                        <div class="subscription" v-if="MaxScrollY > cardSectionPosition[index]">{{cardData.subscription}}</div>
-                        </transition>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div> -->
-            <!-- image component alternation 1111111111111111111111111111-->
-            <!-- <div class="alternationImage-content alternation-row">
-              <div class="col-block text-block">
-                <div id="img1Captionblock" class="section-block caption-section">
-                 
-                  <div class="caption-group caption-group-right" v-if="page==='about'">
-                    <div v-for="(img1Arrey, index ) in img1Arreys " :key="index">
-                      <div class="transition-box" >
-                        <transition v-bind:name="img1Arrey.tName" >
-                            <h2 v-if="MaxScrollY > img1Captionblock"
-                                v-bind:style="{color: img1Arrey.tColor}"  >
-                              {{img1Arrey.tText}}
-                            </h2>
-                        </transition>
-                      </div>
-                    </div>
-                    <div class="link-group">
-                      <div class="link-unit">
-                        <transition name="link-lineMotion-works" >
-                          <div class="link-nextPage" v-if="MaxScrollY > img1Captionblock">
-                              <a v-on:click="link_commit('about', '/about')" >
-                                <div class="next-text">
-                                    ABOUT
-                                </div>
-                              </a>
-                              <a v-on:click="link_commit('about', '/about')" >
-                                <div class="link-arrow" >
-                                  <svg width="60" height="60" >
-                                    <line x1="0" y1="30" x2="60" y2="30"  />
-                                    <polygon  points="56,26 56,34 60,30"/>
-                                  </svg>
-                                </div>
-                              </a>
-                              <a v-on:click="link_commit('about', '/about')" >
-                                <div class="link-circle" >
-                                  <svg width="60" height="60">
-                                    <circle cx="30" cy="30" r="24" />
-                                  </svg> 
-                                </div>
-                              </a>
-                          </div>
-                        </transition>
-                      </div>
-                    </div>
-                  
-                  </div>
-
-                </div>
-              </div>
-              
-              <div id="img1Imageblock" class="col-block image-block ">
-                 <div class="image-section-block  image-section image-right" >
-                  
-                  <transition name="box-shadow-moveRight" >
-                    <div class="box-shadow box-shadow-right" v-if="MaxScrollY > img1Imageblock">
-                      <img v-bind:src="imgURL1" >
-                    </div>
-                  </transition>
-                  <transition name="rippleRight" >
-                    <img v-bind:src="imgURL1" v-if="MaxScrollY > img1Imageblock"  alt="img1">
-                  </transition>
-                </div>
-              </div>
-              
-            </div> -->
-            <!-- col2-content title  222222222222222-->
-            <!-- <div class="col2-content">
-              <div class="col-block left-block">
-                <div class="section-block caption-section">
-
-                  <div v-for="(h1LeftArrey, index) in h1LeftArreys " :key="index">
-                    <div class="transition-box" >
-                      <transition v-bind:name="h1LeftArrey.tName" appear>
-                        <div><p v-bind:style="{color: h1LeftArrey.tColor}">{{h1LeftArrey.tText}}</p></div>
-                      </transition>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-block right-block">
-                <div class="section-block image-section">
-
-                  <div v-for="(h1RightArrey, index ) in h1RightArreys " :key="index">
-                    <div class="transition-box" >
-                      <transition v-bind:name="h1RightArrey.tName" appear>
-                        <div><h1 v-bind:style="{color: h1RightArrey.tColor}">{{h1RightArrey.tText}}</h1></div>
-                      </transition>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-            </div> -->
-            <!-- image component alternation 222222222222222222222222222222222-->
-            <!-- <div class="alternationImage-content alternation-revers">
-              <div id="img2Captionblock" class="col-block text-block">
-                <div  class="section-block caption-section ">
-                  <div class="caption-group caption-group-left">
-                    <div  v-for="(img2Arrey, index ) in img2Arreys " :key="index">
-                      <div class="transition-box" >
-                        <transition v-bind:name="img2Arrey.tName" >
-                            <h2 v-if="MaxScrollY > img2Captionblock" 
-                              v-bind:style="{color: img2Arrey.tColor}">
-                              {{img2Arrey.tText}}
-                            </h2>
-                        </transition>
-                      </div>
-                    </div>
-                    <div class="link-group">
-                      <div class="link-unit">
-                        <transition name="link-lineMotion-works" >
-                          <div class="link-nextPage" v-if="MaxScrollY > img2Captionblock">
-                              <a v-on:click="link_commit('contact', '/contact')" >
-                                <div class="next-text">
-                                    Contact
-                                </div>
-                              </a>
-                              <a v-on:click="link_commit('contact', '/contact')" >
-                                <div class="link-arrow" >
-                                  <svg width="60" height="60" >
-                                    <line x1="0" y1="30" x2="60" y2="30"  />
-                                    <polygon  points="56,26 56,34 60,30"/>
-                                  </svg>
-                                </div>
-                              </a>
-                              <a v-on:click="link_commit('contact', '/contact')" >
-                                <div class="link-circle" >
-                                  <svg width="60" height="60">
-                                    <circle cx="30" cy="30" r="24" />
-                                  </svg> 
-                                </div>
-                              </a>
-                          </div>
-                        </transition>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="img2Imageblock" class="col-block image-block ">
-                 <div class="image-section-block  image-section image-left">
-                  <transition name="box-shadow-moveLeft" >
-                    <div class="box-shadow box-shadow-left" v-if="MaxScrollY > img2Imageblock">
-                      <img v-bind:src="imgURL2" >
-                    </div>
-                  </transition>
-                  <transition name="rippleLeft" >
-                    <img v-bind:src="imgURL2" v-if="MaxScrollY > img2Imageblock"  alt="img2">
-                  </transition>
-                </div>
-              </div>
-            </div> -->
-
         </div>
       </transition>
       <FooterBar  msg="footerBar"
@@ -273,23 +133,42 @@ export default {
         {id:"card3",img: require("../../assets/img/img3668.jpg"), title: "title4", subscription: "subscription4"  },
       ],
       cardSectionPosition:[],
-      h1LeftArreys:[
-        {tName: "carousel-pop-up1", 
-          tText: "Alprime Capital AG (“Alprime”) is a Swiss investment boutique focusing on alternative investments. It was approved as an asset manager of collective investment schemes by the Swiss Financial Market Supervisory Authority (FINMA) in summer 2018. Alprime was established in Baar (Canton Zug/Switzerland) as a spin-off from Progressive Capital Partners Ltd in April 2018. Alprime is owned entirely by its co-founders who also manage the company."
-          , tColor:"rgba(0,0,0,.6)" },
-        {tName: "carousel-pop-up2",  tText:
-          "At Alprime our aim is to provide uncorrelated investment products with stable asset growth. We are convinced that our product offering provides a valuable addition to every portfolio."
-          , tColor:"rgba(0,0,0,.6)"},
-        {tName: "carousel-pop-up3",  tText:
-          "It is our ambition to accept the challenges of changing market environments. We are constantly striving to find new and innovative ways to put our funds to work and to differentiate ourselves from other market players in order to achieve better results for our clients. Our risk management is essential in everything we do since the trust of our clients is the most important asset we have."
-          , tColor:"rgba(0,0,0,.6)"},
-      ],
-      h1RightArreys:[
-        {tName: "carousel-pop-up1",  tText: "At Alprime our mission", tColor:"rgba(0,0,0,.6)" },
-        {tName: "carousel-pop-up2",  tText: "is offering true alternatives", tColor:"rgba(0,0,40,1)" },
-        {tName: "carousel-pop-up3",  tText: "to traditional investments", tColor:"rgba(0,0,40,1)" },
-        {tName: "carousel-pop-up4",  tText: "by thinking outside the box.", tColor:"rgba(0,0,0,.6)" },
-      ],
+              h1LeftArreys:[
+          {tName: "carousel-pop-up1", 
+           tText: 
+           "Seamless Page Transitionは、シームレスなページ遷移を実装する、スターターテンプレートとして開発することを目的としました。再利用できるようにGitHubで共有しました。"
+           , tColor:"rgba(0,0,0,.8)" },
+          {tName: "carousel-pop-up2",  tText:
+           "このサイトは、GitHub Pagesに公開されています。詳細については、README.mdを見てください。"
+            , tColor:"rgba(0,0,0,.8)"},
+          {tName: "carousel-pop-up3",  tText:
+           "このサイトをGitHubで共有することで、Git,GitHubスキル習得を目的としています。"
+            , tColor:"rgba(0,0,0,.6)"},
+          {tName: "carousel-pop-up4",  tText:
+           "4このサイトをGitHubで共有することで、Git,GitHubスキル習得を目的としています。"
+            , tColor:"rgba(0,0,0,.6)"},
+          {tName: "carousel-pop-up5",  tText:
+           "5このサイトをGitHubで共有することで、Git,GitHubスキル習得を目的としています。"
+            , tColor:"rgba(0,0,0,.6)"},
+          {tName: "carousel-pop-up6",  tText:
+           "6このサイトをGitHubで共有することで、Git,GitHubスキル習得を目的としています。"
+            , tColor:"rgba(0,0,0,.6)"},
+          {tName: "carousel-pop-up7",  tText:
+           "7このサイトをGitHubで共有することで、Git,GitHubスキル習得を目的としています。"
+            , tColor:"rgba(0,0,0,.6)"},
+          {tName: "carousel-pop-up8",  tText:
+           "8このサイトをGitHubで共有することで、Git,GitHubスキル習得を目的としています。"
+            , tColor:"rgba(0,0,0,.6)"},
+          {tName: "carousel-pop-up9",  tText:
+           "このサイトをGitHubで共有することで、Git,GitHubスキル習得を目的としています。"
+            , tColor:"rgba(0,0,0,.6)"},
+        ],
+        h1RightArreys:[
+          {tName: "carousel-pop-up1",  tText: "GitHubで...", tColor:"rgba(0,0,0,.6)" },
+          {tName: "carousel-pop-up2",  tText: "再利用が簡単", tColor:"rgba(0,0,40,1)" },
+          {tName: "carousel-pop-up3",  tText: "バージョンを管理", tColor:"rgba(0,0,40,1)" },
+          {tName: "carousel-pop-up4",  tText: "チームで活用", tColor:"rgba(0,0,0,.6)" },
+        ],
 
       img1Arreys:[
         {tName: "text-pop-up1",  tText: "Opportunities. Chances.", tColor:"rgba(0,0,0,.6)"},
@@ -442,7 +321,7 @@ main{
 
 .section-block{
   position: relative;
-  width:100;
+  width:100%;
   height:100%;
   padding: 1.6rem;
   @media (min-width: 992px){
@@ -459,6 +338,29 @@ main{
   } 
 }
 
+.link-text  {
+  position: relative;
+  width: 100%;
+  height: 20rem;
+  padding: 2rem 0;
+}
+
+.link-text a {
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  color:rgba(0,0,0,.6);
+  font-weight: 700;
+  &:hover{
+    color:rgba(0,0,0,1);
+  }
+}
+.text-color-gray{
+  color: rgba(0,0,0,.6);
+}
+.fa-github{
+  margin-right: 1rem;
+}
 .caption-section{
   // border:  1px dotted red;
 }

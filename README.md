@@ -1,57 +1,38 @@
 
-<img width=300 height=200  src='https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition/blob/master/docs/img/h-works1200x600black.7ab65215.svg'>
-# Seamless Page Transition 
-Seamless Page Transitionは、シームレスなページ遷移を実装するために、テストケースとして作成したデモンストレーションサイトです。
-<img width=600 height=400  src='https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition/blob/master/docs/img/page-tran-test1.32bd832b.gif'>
-
+<img width=150 height=100  src='https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition/blob/master/docs/img/h-works1200x600black.7ab65215.svg'>
+# SeamlessPageTransition
+Seamless Page Transitionは、シームレスなページ遷移を実装するために、テストケースとして作成したデモンストレーションサイトです。 
  ![Seamless Page Transition](https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition/blob/master/docs/img/page-tran-test1.32bd832b.gif "Seamless Page Transition")
  
+ # 注意事項 
+あくまでも確認用デモのレポジトリですので、実際の業務への使用はしないでください。 
 
-# Dependency
+# 開発環境セットアップ 
+ # 依存するモジュールのインストール
+npm install
 
-使用言語とバージョン、必要なライブラリとそのバージョンを書く
-Pythonならrequirements.txtを用意するのも良い
+# localhost:8080 でホットリロード可能なサーバの立ち上げ
+npm run dev
 
-# Setup
-セットアップ方法を書く。用意するハードウェアとソフトウェアをセットアップするためのコマンドを記載する
+# プロダクション向けにミニファイル化してビルド
+npm run build
 
-# Usage
-使い方。なるべく具体的に書く。サンプルも書く
+# 単体テストの実行
+npm run unit
 
-# Licence
-This software is released under the MIT License, see LICENSE.
+# E2Eテストの実行
+npm run e2e
 
-# Authors
-作者を明示する。特に、他者が作成したコードを利用する場合は、そのコードのライセンスに従った上で、リポジトリのそれぞれのコードのオリジナルの作者が誰か分かるように明示する（私はそれが良いと思い自主的にしています）。
-
-# References
-参考にした情報源（サイト・論文）などの情報、リンク
-
+# 全てのテストを実行
+npm test
 
 
-# リポジトリ名
-このソフトはどんなもので、何ができるのかを書く
-合わせて、簡単なデモ（使用例）などスクリーンショットやGIFアニメで表示
+# ライセンス
+mit
 
-# Dependency
-使用言語とバージョン、必要なライブラリとそのバージョンを書く
-Pythonならrequirements.txtを用意するのも良い
 
-# Setup
-セットアップ方法を書く。用意するハードウェアとソフトウェアをセットアップするためのコマンドを記載する
 
-# Usage
-使い方。なるべく具体的に書く。サンプルも書く
 
-# Licence
-This software is released under the MIT License, see LICENSE.
-
-# Authors
-作者を明示する。特に、他者が作成したコードを利用する場合は、そのコードのライセンスに従った上で、リポジトリのそれぞれのコードのオリジナルの作者が誰か分かるように明示する（私はそれが良いと思い自主的にしています）。
-
-# References
-参考にした情報源（サイト・論文）などの情報、リンク
-![h-works](./img/h-works1200x600black.svg "h-works")
 1. 環境  
   node:v8.11.1 
   npm:4.0.5 

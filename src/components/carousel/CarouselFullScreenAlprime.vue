@@ -70,6 +70,11 @@
                   <div class="link-position">
                     <div class="transiton-box ">
                       <transition name="carousel-pop-up" appear>
+                        <p>Seamless Page Transition Demo</p>
+                      </transition>
+                    </div>
+                    <div class="transiton-box ">
+                      <transition name="carousel-pop-up" appear>
                         <p>シームレスなページ遷移のデモ</p>
                       </transition>
                     </div>
@@ -185,6 +190,8 @@
               detail: 'path:/works',
               link: 'works',
               link_path: '/works',
+              //   imgTitle: 'Fuji TV',
+            //   imgDate: '2018.11.01',
             },
             {
               id:1,
@@ -195,6 +202,8 @@
               detail: 'path:/projects',
               link: 'projects',
               link_path: '/projects',
+              //   imgTitle: 'Fuji TV',
+            //   imgDate: '2018.11.01',
             },
             {
               id:2,
@@ -205,6 +214,8 @@
               detail: 'path:/about',
               link: 'about',
               link_path: '/about',
+              //   imgTitle: 'Fuji TV',
+            //   imgDate: '2018.11.01',
             },
             {
               id:3,
@@ -215,6 +226,8 @@
               detail: 'path:/content',
               link: 'contact',
               link_path: '/contact',
+              //   imgTitle: 'Fuji TV',
+            //   imgDate: '2018.11.01',
             }
         ],
         transition_name: 'show-next',

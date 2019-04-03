@@ -10,12 +10,12 @@
           </div>
           <div class="transition-box">
             <transition name="carousel-pop-up" appear>
-            <p>HEADER TITLE</p>
+            <p>Seamless Page Transition Demo</p>
             </transition>
           </div>
           <div class="transition-box">
             <transition name="carousel-pop-up" appear>
-            <p>path:/projects </p>
+            <p>画像からのトランジション</p>
             </transition>
           </div>
         </section>
@@ -26,7 +26,11 @@
             <div class="center-line"></div>
             <div class="history-header" >
               <div class="col-block header-block">
-                  <p>HISTORY HEADER</p>
+                <div class="header-block-wrap">
+                  <h1>画像からもシームレスに</h1>
+                  <h1>遷移できます。</h1>
+                </div>
+                 <p class="history-menu-title">MENU</p>
               </div>
             </div>
             <div class="history-altanative" >
@@ -37,19 +41,19 @@
                           <div class="image-group-right" v-if="!isHidden || sec1Select"
                               v-bind:class="{fullScreenImageLeft: sec1Select}" >
                             <div class="img-wrap" v-on:click="scrollTopSec1()" 
-                                v-bind:style="{ 'background-image' : 'url(' + contents[1].imgURL + ')' }">
+                                v-bind:style="{ 'background-image' : 'url(' + contents[2].imgURL + ')' }">
                             </div>
                           </div>
                           <div class="subscribe-group subscribe-group-right" v-if="!isHidden ">
-                            <div class="subscribe-wrap subscribe-wrap-right" >
+                            <div class="subscribe-wrap subscribe-wrap-right" v-on:click="scrollTopSec1()">
                               <div class="transition-box">
                                   <transition name="carousel-pop-up" appear>
-                                      <p v-on:click="scrollTopSec1()">{{contents[1].imgDate}}</p>
+                                      <p v-on:click="scrollTopSec1()">{{contents[2].imgDate}}</p>
                                   </transition>
                               </div>
                               <div class="transition-box">
                                   <transition name="carousel-pop-up" appear>
-                                      <h1 v-on:click="scrollTopSec1()">{{contents[1].imgTitle}}</h1>
+                                      <h1 v-on:click="scrollTopSec1()">{{contents[2].imgTitle}}</h1>
                                   </transition>
                               </div>
                             </div>
@@ -63,19 +67,72 @@
                             <div class="image-group-left" v-if="!isHidden || sec2Select"
                                     v-bind:class="{fullScreenImageRight: sec2Select}" >
                                 <div class="img-wrap" v-on:click="scrollTopSec2()"
-                                    v-bind:style="{ 'background-image' : 'url(' + contents[2].imgURL + ')' }">
+                                    v-bind:style="{ 'background-image' : 'url(' + contents[0].imgURL + ')' }">
                                 </div>
                             </div>
                             <div class="subscribe-group subscribe-group-left" v-if="!isHidden ">
-                                <div class="subscribe-wrap subscribe-wrap-left">
+                                <div class="subscribe-wrap subscribe-wrap-left" v-on:click="scrollTopSec2()">
                                     <div class="transition-box">
                                         <transition name="carousel-pop-up" appear>
-                                            <p v-on:click="scrollTopSec2()">{{contents[2].imgDate}}</p>
+                                            <p v-on:click="scrollTopSec2()">{{contents[0].imgDate}}</p>
                                         </transition>
                                     </div>
                                     <div class="transition-box">
                                         <transition name="carousel-pop-up" appear>
-                                            <h1 v-on:click="scrollTopSec2()">{{contents[2].imgTitle}}</h1>
+                                            <h1 v-on:click="scrollTopSec2()">{{contents[0].imgTitle}}</h1>
+                                        </transition>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col2-block left-block" id="sec3SelectTop">
+                    <div class="section-block section-right" >
+                        <div class="altanative-wrap" v-bind:class="{'altanative-wrap-right' : !sec3Select }" >
+                          <div class="image-group-right" v-if="!isHidden || sec3Select"
+                              v-bind:class="{fullScreenImageLeft3: sec3Select}" >
+                            <div class="img-wrap" v-on:click="scrollTopSec3()" 
+                                v-bind:style="{ 'background-image' : 'url(' + contents[4].imgURL + ')' }">
+                            </div>
+                          </div>
+                          <div class="subscribe-group subscribe-group-right" v-if="!isHidden ">
+                            <div class="subscribe-wrap subscribe-wrap-right" v-on:click="scrollTopSec3()">
+                              <div class="transition-box">
+                                  <transition name="carousel-pop-up" appear>
+                                      <p v-on:click="scrollTopSec3()">{{contents[4].imgDate}}</p>
+                                  </transition>
+                              </div>
+                              <div class="transition-box">
+                                  <transition name="carousel-pop-up" appear>
+                                      <h1 v-on:click="scrollTopSec3()">{{contents[4].imgTitle}}</h1>
+                                  </transition>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col2-block right-block" id="sec4SelectTop">
+                    <div class="section-block section-left" >
+                        <div class="altanative-wrap altanative-wrap-left">
+                            <div class="image-group-left" v-if="!isHidden || sec4Select"
+                                    v-bind:class="{fullScreenImageRight4: sec4Select}" >
+                                <div class="img-wrap" v-on:click="scrollTopSec4()"
+                                    v-bind:style="{ 'background-image' : 'url(' + contents[3].imgURL + ')' }">
+                                </div>
+                            </div>
+                            <div class="subscribe-group subscribe-group-left" v-if="!isHidden ">
+                                <div class="subscribe-wrap subscribe-wrap-left" v-on:click="scrollTopSec4()">
+                                    <div class="transition-box">
+                                        <transition name="carousel-pop-up" appear>
+                                            <p v-on:click="scrollTopSec4()">{{contents[3].imgDate}}</p>
+                                        </transition>
+                                    </div>
+                                    <div class="transition-box">
+                                        <transition name="carousel-pop-up" appear>
+                                            <h1 v-on:click="scrollTopSec4()">{{contents[3].imgTitle}}</h1>
                                         </transition>
                                     </div>
                                 </div>
@@ -87,7 +144,9 @@
             </div>
             <div class="history-footer" >
                 <div class="col-block footer-block">
-                    <p>HISTORY FOOTER</p>
+                  <div class="footer-block-wrap">
+                    <p>Seamless Page Transition Demo</p>
+                  </div>
                 </div>
             </div>
             <transition appear name="tScreen">
@@ -96,7 +155,7 @@
             <transition  name="fade500W500">
                 <div class="bg_filter" v-if="isHidden"></div>
             </transition>
-          </div> 
+          </div>
         </div>
       </transition>
       <FooterBar  msg="footerBar"
@@ -111,7 +170,6 @@
 </template>
 
 <script>
-// import HistorySection from '@/components/section/HistorySection.vue'
 import FooterBar from '@/components/footer/FooterBar.vue'
 
 export default {
@@ -122,7 +180,6 @@ export default {
   },
   components: {
     FooterBar,
-    // HistorySection,
   },
      data () {
       return {
@@ -133,15 +190,19 @@ export default {
         isChengPage: false,
         sec1Select: false,
         sec2Select: false,
+        sec3Select: false,
+        sec4Select: false,
         sec1Position: 0,
         scrollY: 0,
         windowH: 0,
         scrollTopHeight: 0,
         sec1SelectTop: 0,
         sec2SelectTop: 0,
+        sec3SelectTop: 0,
+        sec4SelectTop: 0,
 
         contents: [
-            {
+                      {
               id:0,
               title: 'img1',
               bg_color: '#f16972',
@@ -150,45 +211,68 @@ export default {
               detail: 'path:/works',
               link: 'works',
               link_path: '/works',
-              imgTitle: 'Fuji TV',
-              imgDate: '2018.11.01',
+              // imgTitle: 'Fuji TV',
+              // imgDate: '2018.11.01',
+              imgTitle: 'WORKS CONTENT',
+              imgDate: 'Link',
             },
             {
               id:1,
               title: 'img2',
+              bg_color: '#7bbff9',
+              imgURL: require("../../assets/img/img2722.jpg"),
+              titel: 'PROJECTS CONTENT',
+              detail: 'path:/projects',
+              link: 'projects',
+              link_path: '/projects',
+              //   imgTitle: 'TOYOTA FCV',
+            //   imgDate: '2018.11.01',
+                imgTitle: 'PROJECTS CONTENT',
+              imgDate: 'Link',
+            },
+            {
+              id:2,
+              title: 'img3',
               bg_color: '#f16972',
               imgURL: require("../../assets/img/img4130b.jpg"),
               titel: 'ABOUT CONTENT ',
               detail: 'path:/about',
               link: 'about',
               link_path: '/about',
-              imgTitle: 'TOKYO BIGSITE',
-              imgDate: '2018.11.02',
+              //   imgTitle: 'TOKYO BIG SITE',
+            //   imgDate: '2018.11.01',
+                imgTitle: 'ABOUT CONTENT',
+              imgDate: 'Link',
             },
             {
-              id:2,
-              title: 'img3',
+              id:3,
+              title: 'img4',
               bg_color: '#20d2d3',
               imgURL: require("../../assets/img/img3668.jpg"),
               titel: 'CONTACT CONTENT',
               detail: 'path:/content',
               link: 'contact',
               link_path: '/contact',
-              imgTitle: 'HOTALUNA',
-              imgDate: '2018.11.03',
+              //   imgTitle: 'HOTALUNA',
+            //   imgDate: '2018.11.01',
+                imgTitle: 'CONTACT CONTENT',
+              imgDate: 'Link',
             },
-            {
-              id:3,
-              title: 'img4',
+             {
+              id:4,
+              title: 'img5',
               bg_color: '#7bbff9',
               imgURL: require("../../assets/img/img1578.jpg"),
-              titel: 'TOKYO STATION ',
-              detail: 'MARUNOUCHI',
+              titel: 'HOME CONTENT ',
+              detail: 'path:/',
               link: 'home',
               link_path: '/',
-              imgTitle: 'TOKYO STATION',
-              imgDate: '2018.11.04',
+              // imgTitle: 'TOKYO STATION',
+              // imgDate: '2018.11.04',
+              imgTitle: 'HOME CONTENT',
+              imgDate: 'Link',
             },
+
         ],
       }
   },
@@ -213,6 +297,8 @@ export default {
       this.windowH = window.innerHeight;
       this.sec1SelectTop = document.getElementById('sec1SelectTop').getBoundingClientRect().top + window.scrollY;
       this.sec2SelectTop = document.getElementById('sec2SelectTop').getBoundingClientRect().top + window.scrollY;
+      this.sec3SelectTop = document.getElementById('sec3SelectTop').getBoundingClientRect().top + window.scrollY;
+      this.sec4SelectTop = document.getElementById('sec4SelectTop').getBoundingClientRect().top + window.scrollY;
     },
     scrollTopSec1: function( ){
         this.sec1SelectTop = document.getElementById('sec1SelectTop').getBoundingClientRect().top + window.scrollY;
@@ -247,8 +333,8 @@ export default {
             this.sec2Select = true;
             this.isHidden = true;
             setTimeout( () => {
-                let link = 'contact';
-                let link_path = '/contact';
+                let link = 'works';
+                let link_path = '/works';
                 this.$store.commit( link );
                 setTimeout( () => {
                     this.$router.push({ path: link_path });
@@ -258,6 +344,53 @@ export default {
             }, 1500);
         },1000 );
     },
+    scrollTopSec3: function( ){
+        this.sec3SelectTop = document.getElementById('sec3SelectTop').getBoundingClientRect().top + this.scrollY;
+        this.scrollTopHeight = this.sec3SelectTop - this.scrollY;
+        window.scrollBy({
+            top: this.scrollTopHeight,
+            behavior: "smooth",
+        });
+        setTimeout(() => {
+            this.sec3Select = true;
+            this.isHidden = true;
+            setTimeout( () => {
+                let link = 'home';
+                let link_path = '/';
+                this.$store.commit( link );
+                setTimeout( () => {
+                    this.$router.push({ path: link_path });
+                    this.sec3Select = false;
+                    this.isHidden = false;
+                }, 500);
+            }, 1500);
+        },1000 );
+    },
+    scrollTopSec4: function( ){
+        this.sec4SelectTop = document.getElementById('sec4SelectTop').getBoundingClientRect().top + this.scrollY;
+        this.scrollTopHeight = this.sec4SelectTop - this.scrollY;
+        window.scrollBy({
+            top: this.scrollTopHeight,
+            behavior: "smooth",
+        });
+        setTimeout(() => {
+            this.sec4Select = true;
+            this.isHidden = true;
+            setTimeout( () => {
+                let link = 'contact';
+                let link_path = '/contact';
+                this.$store.commit( link );
+                setTimeout( () => {
+                    this.$router.push({ path: link_path });
+                    this.sec4Select = false;
+                    this.isHidden = false;
+                }, 500);
+            }, 1500);
+        },1000 );
+    },
+
+
+
     link_commit(link, link_path) {
       this.$store.commit( link );
       setTimeout( () => {
@@ -340,7 +473,7 @@ $section-block-height: 80vh;
 .history-header{
   position: relative;
   width: 100%;
-  height: 10rem;
+  height: 30vh;
 }
 .history-altanative{
   position: relative;
@@ -369,9 +502,34 @@ $section-block-height: 80vh;
   left: 0;
   z-index:1;
   background-color: #fff;
-  width: 100%;
-  height: 3.5rem;
+  width: 50%;
+  height: 100%;
   text-align: center;
+  padding: 2rem;
+}
+.header-block-wrap{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header-block-wrap h1{
+  font-size: 2.4rem;
+  @media (min-width: 992px){
+    font-size: 4rem;
+  }
+}
+.history-menu-title{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width:10rem;
+  border: 1px solid;
+
 }
 .footer-block{
   position: absolute;
@@ -380,8 +538,18 @@ $section-block-height: 80vh;
   z-index:1;
   background-color: #fff;
   width: 100%;
-  height: 3.5rem;
+  height: 25vh;
   text-align: center;
+  padding: 2rem;
+}
+.footer-block-wrap{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .grid-container{
   position: relative;
@@ -466,6 +634,12 @@ width: 100%;
     animation: trnLeft 1.5s  ease-in-out forwards;
   }
 }
+.fullScreenImageLeft3{
+  animation: trnLeftMobile 1.5s  ease-in-out forwards;
+  @media (min-width: 992px){
+    animation: trnLeft 1.5s  ease-in-out forwards;
+  }
+}
  
 @keyframes trnLeft{
   0% {
@@ -515,6 +689,12 @@ width: 100%;
     animation: trnRight 1.5s  ease-in-out forwards;
   }
 }
+.fullScreenImageRight4{
+  animation: trnRightMobile 1.5s  ease-in-out forwards;
+  @media (min-width: 992px){
+    animation: trnRight 1.5s  ease-in-out forwards;
+  }
+}
 @keyframes trnRight{
   60% {
     top: 0%;
@@ -554,6 +734,7 @@ width: 100%;
   background-size: cover;
   background-position: center;
   cursor: pointer;
+  
 }
 .subscribe-group{
   cursor: pointer;

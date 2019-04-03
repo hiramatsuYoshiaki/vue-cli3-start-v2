@@ -11,11 +11,17 @@
               <div class="col-block left-block">
                 <div class="section-block left-section">
                   <div class="contact-title">
-                    <h1>Please contact us for </h1>
-                    <h1>further information </h1>
-                    <h1>about Alprime Capital </h1>
-                    <h1>and the products we can </h1>
-                    <h1> offer to you.</h1>
+                    <div class="link-text">
+                      <a href="http://tourdehdr.sakuraweb.com/h-works-website/index.html">
+                        
+                        <p>portfolio site</p>
+                        <p>http://tourdehdr.sakuraweb.com/h-works-website/index.html</p>
+                        <br>
+                        <h1>HIRAMATSU WORKS</h1>
+                         <br>
+                        <p>このWEBサイトは、作品をご覧いただき、デザイン、コーディング、プログラミングなどのスキルレベルをご確認いただくために作成しております。</p>
+                      </a>
+                    </div>
                   </div> 
                 </div>
               </div>
@@ -62,14 +68,17 @@ main{
 .main-content{
   width:100%;
   // height: calc( 100vh - #{ $header-height } );
-  height: 100vh;
+  height: 100%;
+  // height: 100vh;
+  min-height: 100vh;
+  @media (min-width: 992px){
+    height: 100vh;
+  }
   // margin-top: #{ $header-height } ;
   //横スクロール処理
   width: auto;
   min-width: 100vw;
-
   padding: 1rem 1rem;
-  
   background-color: $footer-color-color;
   color: $footer-color-text;
 }
@@ -92,26 +101,17 @@ main{
   justify-content: flex-start;
   align-items: center;
   // flex-direction: column; 
-  padding: 3.2rem 1.6rem;
+  padding: 6rem 1.6rem;
   @media (min-width: 992px){
     padding-left: 16rem ;
   }
 }
-// .left-block{
-  // background-color: rgba(0,0,0,.1);
-  // border:  2px solid red;
-// }
-// .right-block{
-  // background-color: rgba(0,0,0,.3);
-  // border:  2px solid green;
-// }
 .section-block{
   // border:  3px dotted green;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  
 }
 .left-section{
   // border:  3px dotted red;
@@ -119,10 +119,6 @@ main{
 .right-section{
   // border:  3px dotted yellow;
 }
-// .contact-title{
-//   width:100%;
-//   height:50%;
-// }
 .contact-title h1{
   font-size: 2.8rem;
   @media(min-width:992px){
@@ -131,6 +127,27 @@ main{
 }
 i{
   margin-right: .5rem;
+}
+
+.link-text  {
+  position: relative;
+  width: 35rem;
+  height: 35rem;
+  padding: 2rem 0;
+}
+.link-text a {
+  position: absolute;
+  z-index: 2;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+  color:rgba(250,250,250,1);
+  font-weight: 700;
+  &:hover{
+    color:rgba(250,250,250,.8);
+    
+  }
 }
 // .main-footer{
 //   padding: 1rem 1rem;
@@ -143,7 +160,5 @@ i{
   // width: auto;
   // min-width: 100vw;
 // }
-
-
 
 </style>
