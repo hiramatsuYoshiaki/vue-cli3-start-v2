@@ -17,6 +17,9 @@ Seamless Page Transitionは、シームレスなページ遷移を実装する�
 
 
 ![Seamless Page Transition](https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition/blob/master/docs/img/page-tran-test1.32bd832b.gif "Seamless Page Transition")
+
+![test1](https://user-images.githubusercontent.com/20366817/55527771-7441c180-56d5-11e9-93a4-d8fecc854d2e.gif)
+
  
  # 注意事項 
 あくまでも確認用デモのレポジトリですので、実際の業務への使用はしないでください。 
