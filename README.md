@@ -4,15 +4,15 @@
 # SeamlessPageTransition
 Seamless Page Transitionは、シームレスなページ遷移を実装するために、テストケースとして作成したデモンストレーションサイトです。ウェブ開発のスタートテンプレートとして試作中です。 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/hiramatsuYoshiaki/vue-cli3-page-transition.svg) 
-
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/hiramatsuYoshiaki/vue-cli3-page-transition.svg) 
-
 ![GitHub issues](https://img.shields.io/github/issues/hiramatsuYoshiaki/vue-cli3-page-transition.svg) 
-
 ![GitHub forks](https://img.shields.io/github/forks/hiramatsuYoshiaki/vue-cli3-page-transition.svg?style=social) 
 ![Seamless Page Transition](https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition/blob/master/docs/img/page-tran-test1.32bd832b.gif "Seamless Page Transition")
- 
- 
+![GitHub forks](https://img.shields.io/github/forks/hiramatsuYoshiaki/vue-cli3-page-transition.svg?style=social)
+
+![Seamless Page Transition](https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition/blob/master/docs/img/page-tran-test1.32bd832b.gif "Seamless Page Transition")
+
+![test1](https://user-images.githubusercontent.com/20366817/55527771-7441c180-56d5-11e9-93a4-d8fecc854d2e.gif)
 
 ## 機能
  
