@@ -7,24 +7,17 @@
                  v-bind:headerScrollType="true"
                  v-bind:headerFixedType="false"
                  v-bind:headerStikyType="false"
-                
-                 
       />
       <BgImageFull msg="bgImage" v-bind:img= bgImage />
       <AboutContent msg="AboutContent"/>
   </div>
 </div>
 </template>
-
-
 <script>
-// @ is an alias to /src
 import AboutContent from '@/components/about/AboutContent.vue'
 import HeaderBar from '@/components/header/HeaderBar.vue'
 import BgImageFull from '@/components/background/BgImageFull.vue'
 import TransitionScreen from '@/components/transition/TransitionScreen.vue'
-
-
 export default {
   name: 'About',
   components: {
@@ -32,7 +25,6 @@ export default {
     HeaderBar,
     BgImageFull,
     TransitionScreen,
-
   },
     data () {
       return {

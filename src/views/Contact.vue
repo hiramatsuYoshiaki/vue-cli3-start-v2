@@ -8,8 +8,6 @@
                  v-bind:headerScrollType="false"
                  v-bind:headerFixedType="true"
                  v-bind:headerStikyType="false"
-                
-                
       />
       <BgImageFull msg="bgImage"
                    v-bind:img= bgImage />
@@ -17,16 +15,11 @@
   </div>
 </div>
 </template>
-
-
 <script>
-// @ is an alias to /src
 import ContactContent from '@/components/contact/ContactContent.vue'
 import HeaderBar from '@/components/header/HeaderBar.vue'
 import BgImageFull from '@/components/background/BgImageFull.vue'
 import TransitionScreen from '@/components/transition/TransitionScreen.vue'
-
-
 export default {
   name: 'Contact',
   components: {
@@ -34,7 +27,6 @@ export default {
     HeaderBar,
     BgImageFull,
     TransitionScreen,
-
   },
   data () {
     return {
