@@ -13,10 +13,7 @@
   </div>
 </div>
 </template>
-
-
 <script>
-// @ is an alias to /src
 import WorksContent from '@/components/works/WorksContent.vue'
 import HeaderBar from '@/components/header/HeaderBar.vue'
 import BgImageFull from '@/components/background/BgImageFull.vue'

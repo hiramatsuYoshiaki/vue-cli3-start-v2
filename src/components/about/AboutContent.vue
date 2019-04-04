@@ -50,15 +50,29 @@
                     
                    
                     <div class="link-text">
-                        <a href="https://hiramatsuyoshiaki.github.io/vue-cli3-page-transition/" > 
+                        <!-- <a href="https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition" >  -->
                           <div class="transition-box" >
                             <transition name="carousel-pop-up4" appear>
                               <div>
                                 <p><i class="fab fa-github"></i><span>GitHub Repository</span></p>
                                 <p>hiramatsuYoshiaki/vue-cli3-page-transition</p>
+                                <a href="https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition" >
+                                  <p>URL: https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition</p>
+                                </a>
+                              </div>
+                            </transition>
+                          </div>
+                        <!-- </a> -->
+                    </div>
+                    <div class="link-text">
+                        <a href="https://hiramatsuyoshiaki.github.io/vue-cli3-page-transition/" > 
+                          <div class="transition-box" >
+                            <transition name="carousel-pop-up4" appear>
+                              <div>
+                                <p><i class="fab fa-github"></i><span>GitHub Page</span></p>
                                 <p>URL: https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition</p>
                               </div>
-                              </transition>
+                            </transition>
                           </div>
                         </a>
                     </div>
@@ -349,10 +363,10 @@ main{
   position: absolute;
   z-index: 2;
   cursor: pointer;
-  color:rgba(0,0,0,.6);
+  color:rgba(0,0,0,1);
   font-weight: 700;
   &:hover{
-    color:rgba(0,0,0,1);
+    color:rgba(0,0,0,.7);
   }
 }
 .text-color-gray{

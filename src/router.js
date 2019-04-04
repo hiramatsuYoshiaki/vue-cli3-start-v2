@@ -36,19 +36,24 @@ export default new Router({
       component: Home
     },
     {
+      path: '/home',
+      name: 'home',
+      component: Home
+    },
+    {
       path: '/works',
       name: 'works',
-      component: () => import(/* webpackChunkName: "about" */ './views/Works.vue')
+      component: () => import('./views/Works.vue')
     },
     {
       path: '/about',
       name: 'about',
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      component: () => import('./views/About.vue')
     },
     {
       path: '/contact',
       name: 'contact',
-      component: () => import(/* webpackChunkName: "about" */ './views/Contact.vue')
+      component: () => import('./views/Contact.vue')
     },
     {
       path: '/projects',

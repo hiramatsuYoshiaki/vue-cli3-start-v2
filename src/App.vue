@@ -1,25 +1,14 @@
 <template>
   <div id="app">
-    <!-- loding  ----------------------------------------->
-    <!-- <div v-if="isLoading">
-      <Spinner/>
-    </div> -->
-   
-    <!-- <div  v-if="isLoading">
-      <LoadingCounterBar2 :cnt="progress" />
-    </div> -->
-
+    <!-- loding  -->
     <div  v-if="isLoading">
       <LoadingWrite />
     </div>
-
-    <!-- transition  ----------------------------------------->
-
+    <!-- transition  -->
     <div  v-if="!isLoading">
         <TransitionScreen msg="bgImage" v-bind:img= bgImage pageView="loading"  />
     </div>
-
-    <!-- contents  ----------------------------------------->
+    <!-- contents  -->
     <div  v-if="!isLoading">
       <router-view /> 
     </div> 
@@ -44,6 +33,7 @@
         setInterval(() => {
           this.isLoading = false;
         }, 3000);
+      //
     },
   }
 </script>
