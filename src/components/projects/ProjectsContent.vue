@@ -417,6 +417,18 @@ export default {
 main{
   margin: 0;
   padding: 0;
+  h1{
+    font-size: 2.8rem;
+    @media(min-width: 992px){
+      font-size: 4.0rem;
+    }
+  }
+  p{
+    font-size: 1.6rem;
+    @media(min-width: 992px){
+      font-size: 2.0rem;
+    } 
+  }
 }
 .main-header{
   height: 35vh;

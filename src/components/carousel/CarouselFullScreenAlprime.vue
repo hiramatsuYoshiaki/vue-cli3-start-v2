@@ -492,7 +492,7 @@
     // border: 1px solid  yellow;
     width:100%;
     height:100%;
-    margin: 0 1rem;
+    margin: -2.5rem 1rem;
     @media(min-width: 996px){
       margin: 0 10rem ;
     }

@@ -253,7 +253,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column-reverse;
   @media ( min-width: 992px){
     justify-content: space-between;
     flex-direction: row;
