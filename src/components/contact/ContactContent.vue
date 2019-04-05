@@ -12,15 +12,15 @@
                 <div class="section-block left-section">
                   <div class="contact-title">
                     <div class="link-text">
-                      <!-- <a href="http://tourdehdr.sakuraweb.com/h-works-website/index.html"> -->
+                      <a href="http://tourdehdr.sakuraweb.com/h-works-website/index.html">
                         <p>portfolio site</p>
                         <p>http://tourdehdr.sakuraweb.com/h-works-website/index.html</p>
-                        <br>
-                        <h1>HIRAMATSU WORKS</h1>
-                         <br>
-                        <p>このWEBサイトは、作品をご覧いただき、デザイン、コーディング、プログラミングなどのスキルレベルをご確認いただくために作成しております。</p>
-                      <!-- </a> -->
+                      </a>
                     </div>
+                    <br>
+                    <h1>HIRAMATSU WORKS</h1>
+                    <br>
+                    <p>このWEBサイトは、作品をご覧いただき、デザイン、コーディング、プログラミングなどのスキルレベルをご確認いただくために作成しております。</p>
                   </div> 
                 </div>
               </div>
@@ -101,17 +101,17 @@ main{
   background-color: $footer-color-color;
   color: $footer-color-text;
 }
-//section-2col
 .col2-content{
   position: relative;
   width: 100%;
   height: 100%;
   display:flex;
   flex-wrap: wrap;
+  
 }
 .col-block{
-  // border:  2px solid white;
   width: 100%;
+  height: 100%;
   @media (min-width: 992px){
     width: 50%;
     height: 100%;
@@ -124,14 +124,18 @@ main{
   @media (min-width: 992px){
     padding-left: 16rem ;
   }
+  
 }
 .section-block{
-  // border:  3px dotted green;
+  position:relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
    overflow: hidden;
+   width: 100%;
+   height: 100%;
+  
 }
 .left-section{
   // border:  3px dotted red;
@@ -139,11 +143,14 @@ main{
 .right-section{
   // border:  3px dotted yellow;
 }
-.contact-title h1{
-  font-size: 2.8rem;
-  @media(min-width:992px){
-    font-size: 4rem;
-  }
+.contact-title {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
 }
 i{
   margin-right: .5rem;
@@ -152,45 +159,28 @@ i{
 .link-text  {
   position: relative;
   width: 100%;
-  height: 25rem;
-  @media(min-width:576px){
-    height: 40rem;
-  }
-  @media(min-width:992px){
-    height: 100%;
-  }
-  padding: 2rem 0;
+  height: 10rem;
+  margin-top:3rem;
 }
+
 .link-text a {
   position: absolute;
   z-index: 2;
   display: block;
-  top:50%;
+  top:0%;
   left:0%;
-  transform: translate(0%,-50%);
-  @media(min-width:992px){
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-  }
+  // transform: translate(0%,-50%);
+  // @media(min-width:992px){
+  //   top:50%;
+  //   left:50%;
+  //   transform: translate(-50%,-50%);
+  // }
   cursor: pointer;
   color:rgba(250,250,250,1);
   font-weight: 700;
   &:hover{
-    color:rgba(250,250,250,.8);
-    
+    color:rgba(250,250,250,.7);
+    opacity: 1;
   }
 }
-// .main-footer{
-//   padding: 1rem 1rem;
-//   width:100%;
-//   height: 20vh;
-//   border: 1px solid yellow;
-//   background-color: $footer-color-color;
-//   color: $footer-color-text;
-//横スクロール処理
-  // width: auto;
-  // min-width: 100vw;
-// }
-
 </style>
