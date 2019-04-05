@@ -289,7 +289,7 @@
 }
 .carousel-pop-up-enter, .carousel-pop-up-leave-to {
     opacity: 1;
-    transform: translateY(100%);
+    transform: translateY(200%);
 }
 .carousel-fade-slideLeft-enter-active, .carousel-fade-slideLeft-leave-active {
     transition: all .5s 2s cubic-bezier(0.545, 0.080, 0.520, 0.975);;
