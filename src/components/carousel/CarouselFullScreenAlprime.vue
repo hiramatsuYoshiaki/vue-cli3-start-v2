@@ -507,6 +507,18 @@
   overflow: hidden;
   margin-bottom: 0.5rem;
   cursor: pointer;
+  h1{
+    font-size: 2.0rem;
+    @media(min-width: 992px){
+      font-size: 4.0rem;
+    }
+  }
+  p{
+    font-size: 1.0rem;
+    @media(min-width: 992px){
+      font-size: 2.0rem;
+    } 
+  }
 }
 
 // link-unit--------------------
