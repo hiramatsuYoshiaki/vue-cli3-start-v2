@@ -50,7 +50,7 @@
       
       <div class="footer-bottom" v-if="footerBottom" >
         <div class="footer-bottom-wrap">
-            <div class="copy-light">© 2018 h-works. All Rights Reserved</div>
+            <div class="copy-light">© 2019 h-works.</div>
             <!-- <div>Terms of Use</div>
             <div>Privacy Policy</div>
             <div>Disclaimer</div>
