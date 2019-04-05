@@ -69,29 +69,29 @@
                 <div class="carousel-link">
                   <div class="link-position">
                     <div class="transiton-box ">
-                      <transition name="carousel-pop-up" appear>
+                      <transition name="carousel-pop-up" appear :key="content.id + 'title1'">
                         <p>Seamless Page Transition Demo</p>
                       </transition>
                     </div>
                     <div class="transiton-box ">
-                      <transition name="carousel-pop-up" appear>
+                      <transition name="carousel-pop-up" appear :key="content.id + 'title2'">
                         <p>シームレスなページ遷移のデモ</p>
                       </transition>
                     </div>
                     <div class="transiton-box ">
-                      <transition name="carousel-pop-up" appear>
+                      <transition name="carousel-pop-up" appear :key="content.id + 'title3'">
                         <h1>{{content.titel }}</h1>
                       </transition>
                     </div>
                     <div class="transiton-box ">
-                      <transition name="carousel-pop-up" appear>
+                      <transition name="carousel-pop-up" appear :key="content.id + 'title4'">
                       <!-- <p>{{content.detail }}</p> -->
                       <p>クリックしてボーダレスなページ移動を確認ください。</p>
                       </transition>
                     </div>
 
                     <div class="link-unit">
-                      <transition name="link-lineMotion" appear>
+                      <transition name="link-lineMotion" appear :key="content.id + 'link'">
                         <div class="link-nextPage">
                             <a v-on:click="link_commit(content.link, content.link_path)" >
                               <div class="next-text">
