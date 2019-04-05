@@ -50,31 +50,62 @@
                     
                    
                     <div class="link-text">
-                        <!-- <a href="https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition" >  -->
                           <div class="transition-box" >
-                            <transition name="carousel-pop-up4" appear>
+                            <transition name="carousel-pop-up1" appear>
                               <div>
                                 <p><i class="fab fa-github"></i><span>GitHub Repository</span></p>
-                                <p>hiramatsuYoshiaki/vue-cli3-page-transition</p>
+                                <!-- <p>hiramatsuYoshiaki/vue-cli3-page-transition</p>
                                 <a href="https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition" >
                                   <p>URL: https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition</p>
+                                </a> -->
+                              </div>
+                            </transition>
+                           </div>
+                          <div class="transition-box" >  
+                          <transition name="carousel-pop-up2" appear>
+                              <div>
+                                <!-- <p><i class="fab fa-github"></i><span>GitHub Repository</span></p> -->
+                                <p>hiramatsuYoshiaki/vue-cli3-page-transition</p>
+                                <!-- <a href="https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition" >
+                                  <p>URL: https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition</p>
+                                </a> -->
+                              </div>
+                            </transition>
+                          </div>
+                          <div class="transition-box" > 
+                            <transition name="carousel-pop-up3" appear>
+                              <div>
+                                <!-- <p><i class="fab fa-github"></i><span>GitHub Repository</span></p>
+                                <p>hiramatsuYoshiaki/vue-cli3-page-transition</p> -->
+                                <a  class="link-url" href="https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition" >
+                                  <p>URL:https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition</p>
                                 </a>
                               </div>
                             </transition>
                           </div>
-                        <!-- </a> -->
                     </div>
                     <div class="link-text">
-                        <a href="https://hiramatsuyoshiaki.github.io/vue-cli3-page-transition/" > 
+                         
                           <div class="transition-box" >
-                            <transition name="carousel-pop-up4" appear>
+                            <transition name="carousel-pop-up1" appear>
                               <div>
                                 <p><i class="fab fa-github"></i><span>GitHub Page</span></p>
-                                <p>URL: https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition</p>
+                                <!-- <a href="https://hiramatsuyoshiaki.github.io/vue-cli3-page-transition/" >
+                                  <p>URL: https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition</p>
+                                </a> -->
                               </div>
                             </transition>
                           </div>
-                        </a>
+                          <div class="transition-box" >   
+                            <transition name="carousel-pop-up2" appear>
+                              <div>
+                                <!-- <p><i class="fab fa-github"></i><span>GitHub Page</span></p> -->
+                                <a class="link-url" href="https://hiramatsuyoshiaki.github.io/vue-cli3-page-transition/" >
+                                  <p>URL:https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition</p>
+                                </a>
+                              </div>
+                            </transition>
+                          </div>
                     </div>
                    
                     <div class="transition-box" >
@@ -102,14 +133,15 @@
             </div>
         </div>
       </transition>
-      <FooterBar  msg="footerBar"
-                  navMenu="prpject"
+      
+    </main>
+    <FooterBar  msg="footerBar"
+                  navMenu="about"
                   v-bind:footerTop= "true"
                   v-bind:footerBottom= "true"
                   v-bind:footerMenu= "true"
                   v-bind:footerSepalater= "true"
                   />
-    </main>
   </div>
 </template>
 
@@ -217,19 +249,19 @@ export default {
   },
   methods: {
     handleScroll() {
-      for (var i = 0; i < this.cardDatas.length; i++) {
+      // for (var i = 0; i < this.cardDatas.length; i++) {
        
-        this.cardSectionPosition[i] = document.getElementById(this.cardDatas[i].id).getBoundingClientRect().top
-                          + window.scrollY  - (window.innerHeight*0.7) ;
-      }
-      this.img1Captionblock = document.getElementById('img1Captionblock').getBoundingClientRect().top
-                          + window.scrollY  - (window.innerHeight*0.8) ;
-      this.img1Imageblock = document.getElementById('img1Imageblock').getBoundingClientRect().top
-                          + window.scrollY  - (window.innerHeight*0.8)  ;
-      this.img2Captionblock = document.getElementById('img2Captionblock').getBoundingClientRect().top
-                          + window.scrollY  - (window.innerHeight*0.8) ;
-      this.img2Imageblock = document.getElementById('img2Imageblock').getBoundingClientRect().top
-                          + window.scrollY  - (window.innerHeight*0.8)  ;
+      //   this.cardSectionPosition[i] = document.getElementById(this.cardDatas[i].id).getBoundingClientRect().top
+      //                     + window.scrollY  - (window.innerHeight*0.7) ;
+      // }
+      // this.img1Captionblock = document.getElementById('img1Captionblock').getBoundingClientRect().top
+      //                     + window.scrollY  - (window.innerHeight*0.8) ;
+      // this.img1Imageblock = document.getElementById('img1Imageblock').getBoundingClientRect().top
+      //                     + window.scrollY  - (window.innerHeight*0.8)  ;
+      // this.img2Captionblock = document.getElementById('img2Captionblock').getBoundingClientRect().top
+      //                     + window.scrollY  - (window.innerHeight*0.8) ;
+      // this.img2Imageblock = document.getElementById('img2Imageblock').getBoundingClientRect().top
+      //                     + window.scrollY  - (window.innerHeight*0.8)  ;
       this.innerHeight = window.innerHeight;
       this.scrollY = window.scrollY;
       if(this.scrollY > this.MaxScrollY) {
@@ -262,6 +294,18 @@ export default {
 main{
   margin: 0;
   padding: 0;
+  h1{
+    font-size: 2.8rem;
+    @media(min-width: 992px){
+      font-size: 4.0rem;
+    }
+  }
+  p{
+    font-size: 1.6rem;
+    @media(min-width: 992px){
+      font-size: 2.0rem;
+    } 
+  }
 }
 .main-header{
   height: 35vh;
@@ -285,6 +329,7 @@ main{
   width: 100%;
   overflow: hidden;
   margin-bottom: 0.5rem;
+  
 }
 .main-header h1,  .main-header p{
   color: $header-text;
@@ -355,18 +400,24 @@ main{
 .link-text  {
   position: relative;
   width: 100%;
-  height: 20rem;
+  height: 12rem;
+  @media(min-width: 992px){
+    height: 20rem;
+  } 
   padding: 2rem 0;
+  overflow: hidden;
 }
 
-.link-text a {
+.link-url {
   position: absolute;
   z-index: 2;
+  display: block;
   cursor: pointer;
   color:rgba(0,0,0,1);
   font-weight: 700;
   &:hover{
     color:rgba(0,0,0,.7);
+    opacity: 1;
   }
 }
 .text-color-gray{

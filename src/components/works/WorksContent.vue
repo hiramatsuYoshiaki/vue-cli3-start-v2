@@ -57,7 +57,7 @@
       </transition>
     </main>
     <FooterBar  msg="footerBar"
-                  navMenu="prpject"
+                  navMenu="works"
                   v-bind:footerTop= "true"
                   v-bind:footerBottom= "true"
                   v-bind:footerMenu= "true"
@@ -165,12 +165,12 @@ export default {
       // console.log('workcomponent this.scrollY: ' + this.scrollY);
       // this.img1Captionblock = document.getElementById('img1Captionblock').getBoundingClientRect().top
       //                     + window.scrollY  - (window.innerHeight*0.8) ;
-      this.img1Imageblock = document.getElementById('img1Imageblock').getBoundingClientRect().top
-                          + window.scrollY  - (window.innerHeight*0.8)  ;
-      this.img2Captionblock = document.getElementById('img2Captionblock').getBoundingClientRect().top
-                          + window.scrollY  - (window.innerHeight*0.8) ;
-      this.img2Imageblock = document.getElementById('img2Imageblock').getBoundingClientRect().top
-                          + window.scrollY  - (window.innerHeight*0.8)  ;
+      // this.img1Imageblock = document.getElementById('img1Imageblock').getBoundingClientRect().top
+      //                     + window.scrollY  - (window.innerHeight*0.8)  ;
+      // this.img2Captionblock = document.getElementById('img2Captionblock').getBoundingClientRect().top
+      //                     + window.scrollY  - (window.innerHeight*0.8) ;
+      // this.img2Imageblock = document.getElementById('img2Imageblock').getBoundingClientRect().top
+      //                     + window.scrollY  - (window.innerHeight*0.8)  ;
       this.innerHeight = window.innerHeight;
       this.scrollY = window.scrollY;
       if(this.scrollY > this.MaxScrollY) {
@@ -223,6 +223,18 @@ export default {
 main{
   margin: 0;
   padding: 0;
+  h1{
+    font-size: 2.8rem;
+    @media(min-width: 992px){
+      font-size: 4.0rem;
+    }
+  }
+  p{
+    font-size: 1.6rem;
+    @media(min-width: 992px){
+      font-size: 2.0rem;
+    } 
+  }
 }
 .main-header{
   // width:100%;

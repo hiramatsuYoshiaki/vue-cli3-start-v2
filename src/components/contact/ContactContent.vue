@@ -12,15 +12,14 @@
                 <div class="section-block left-section">
                   <div class="contact-title">
                     <div class="link-text">
-                      <a href="http://tourdehdr.sakuraweb.com/h-works-website/index.html">
-                        
+                      <!-- <a href="http://tourdehdr.sakuraweb.com/h-works-website/index.html"> -->
                         <p>portfolio site</p>
                         <p>http://tourdehdr.sakuraweb.com/h-works-website/index.html</p>
                         <br>
                         <h1>HIRAMATSU WORKS</h1>
                          <br>
                         <p>このWEBサイトは、作品をご覧いただき、デザイン、コーディング、プログラミングなどのスキルレベルをご確認いただくために作成しております。</p>
-                      </a>
+                      <!-- </a> -->
                     </div>
                   </div> 
                 </div>
@@ -64,7 +63,27 @@ export default {
 main{
   margin: 0;
   padding: 0;
+  h1{
+    font-size: 2.8rem;
+    @media(min-width:576px){
+      font-size: 2.8rem;
+    }
+    @media(min-width: 992px){
+      font-size: 4.0rem;
+    }
+  }
+  p{
+    font-size: 1.6rem;
+    @media(min-width:576px){
+      font-size: 1.6rem;
+    }
+    @media(min-width: 992px){
+      font-size: 2.0rem;
+    } 
+  }
 }
+
+
 .main-content{
   width:100%;
   // height: calc( 100vh - #{ $header-height } );
@@ -112,6 +131,7 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+   overflow: hidden;
 }
 .left-section{
   // border:  3px dotted red;
@@ -131,16 +151,28 @@ i{
 
 .link-text  {
   position: relative;
-  width: 35rem;
-  height: 35rem;
+  width: 100%;
+  height: 25rem;
+  @media(min-width:576px){
+    height: 40rem;
+  }
+  @media(min-width:992px){
+    height: 100%;
+  }
   padding: 2rem 0;
 }
 .link-text a {
   position: absolute;
   z-index: 2;
+  display: block;
   top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  left:0%;
+  transform: translate(0%,-50%);
+  @media(min-width:992px){
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
   cursor: pointer;
   color:rgba(250,250,250,1);
   font-weight: 700;
