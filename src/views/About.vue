@@ -1,16 +1,21 @@
 <template>
 <div class="about">
-  <div class="aboutWrap">
-    <TransitionScreen msg="bgImage" v-bind:img= bgImage pageView="about"  />
-      <HeaderBar msg="HeaderBar"
-                 navMenu="about"
-                 v-bind:headerScrollType="true"
-                 v-bind:headerFixedType="false"
-                 v-bind:headerStikyType="false"
-      />
+    <div class="aboutWrap">
       <BgImageFull msg="bgImage" v-bind:img= bgImage />
+      
+      <HeaderBar msg="HeaderBar"
+                  navMenu="about"
+                  v-bind:headerScrollType="true"
+                  v-bind:headerFixedType="false"
+                  v-bind:headerStikyType="false"/>
       <AboutContent msg="AboutContent"/>
-  </div>
+      <transition appear name="tScreen">
+        <TransitionScreen msg="bgImage" 
+          v-bind:img= bgImage pageView="about"
+          v-if="page === 'about'"
+        />
+      </transition>
+    </div>
 </div>
 </template>
 <script>
@@ -26,7 +31,12 @@ export default {
     BgImageFull,
     TransitionScreen,
   },
-    data () {
+  computed: {
+    page () {
+    return this.$store.state.page;
+    },
+  },
+  data () {
       return {
         bgImage: require("../assets/img/img4130b.jpg"),
       }

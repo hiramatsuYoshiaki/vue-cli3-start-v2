@@ -1,25 +1,25 @@
 <template>
-<div class="hoem">
-  <!-- <div class="homeWrap"> -->
-    <TransitionScreen msg="bgImage" v-bind:img= bgImage pageView="home"  />
-    <HeaderBar msg="HeaderBar"
-                navMenu="home"
-                v-bind:headerScrollType="true"
-                v-bind:headerFixedType="false"
-                v-bind:headerStikyType="false"
-                v-bind:logoPositionLeft="true"
-                v-bind:logoPositionCenter="false"
-                v-bind:logoPositionRight="false"
-    />
-    <!-- <BgImageFull msg="bgImage" v-bind:img= bgImage /> -->
-    <HomeContent msg="HomeContent"/>
-    <!-- <FooterBar msg="FooterBar"/>  -->
-  <!-- </div> -->
-<!-- </div> -->
-</div>
+  <div class="hoem">
+    <!-- <div class="homeWrap"> -->
+      <!-- <BgImageFull msg="bgImage" v-bind:img= bgImage /> -->
+      <HeaderBar msg="HeaderBar"
+                  navMenu="home"
+                  v-bind:headerScrollType="true"
+                  v-bind:headerFixedType="false"
+                  v-bind:headerStikyType="false"
+                  v-bind:logoPositionLeft="true"
+                  v-bind:logoPositionCenter="false"
+                  v-bind:logoPositionRight="false" />
+      <HomeContent msg="HomeContent"/>
+      <transition appear name="tScreen">
+        <TransitionScreen msg="bgImage" 
+          v-bind:img= bgImage 
+          v-if="page === 'home'"
+        />
+      </transition>
+    <!-- </div> -->
+  </div>
 </template>
-
-
 <script>
 // @ is an alias to /src
 import HomeContent from '@/components/home/HomeContent.vue'
@@ -40,6 +40,11 @@ export default {
     // LoadingCounterBar2,
     // LoadingWrite,
     TransitionScreen,
+  },
+  computed: {
+    page () {
+    return this.$store.state.page;
+    },
   },
   data () {
       return {

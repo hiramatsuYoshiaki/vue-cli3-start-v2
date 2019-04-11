@@ -44,6 +44,14 @@
                 </a>
                 <div class="menu_underline"></div>
               </div>
+              <div class="menu-item-box">
+                <a v-on:click="link_commit('service', '/service')" 
+                class="menu_link" 
+                v-bind:class="{ menu_item_visible: page === 'service' }">
+                  SERVICE
+                </a>
+                <div class="menu_underline"></div>
+              </div>
             </div>
           </div>
       </nav>

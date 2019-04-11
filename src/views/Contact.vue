@@ -1,18 +1,20 @@
 <template>
 <div class="contact">
-  <div class="contactWrap">
-    <TransitionScreen msg="bgImage" 
-    v-bind:img= bgImage pageView="contact"  />
+    <div class="contactWrap">
+      <BgImageFull msg="bgImage" v-bind:img= bgImage />
       <HeaderBar msg="HeaderBar"
-                 navMenu="contact"
-                 v-bind:headerScrollType="false"
-                 v-bind:headerFixedType="true"
-                 v-bind:headerStikyType="false"
-      />
-      <BgImageFull msg="bgImage"
-                   v-bind:img= bgImage />
-      <ContactContent msg="ContactContent"/>
-  </div>
+                  navMenu="contact"
+                  v-bind:headerScrollType="false"
+                  v-bind:headerFixedType="true"
+                  v-bind:headerStikyType="false" />
+        <ContactContent msg="ContactContent"/>
+        <transition appear name="tScreen">  
+          <TransitionScreen msg="bgImage" 
+            v-bind:img= bgImage pageView="contact"
+            v-if="page === 'contact'"
+          />
+        </transition>
+    </div>
 </div>
 </template>
 <script>
@@ -27,6 +29,11 @@ export default {
     HeaderBar,
     BgImageFull,
     TransitionScreen,
+  },
+  computed: {
+    page () {
+    return this.$store.state.page;
+    },
   },
   data () {
     return {

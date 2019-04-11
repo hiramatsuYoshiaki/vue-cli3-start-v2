@@ -57,9 +57,6 @@ export default {
   stroke: #ffffff;
 }
 
-
-
-
 @keyframes dash {
   0% {
     stroke-dashoffset: 2000;

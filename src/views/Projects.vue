@@ -2,15 +2,19 @@
 <div class="projects">
     project 
   <div class="projectsWrap">
-      <TransitionScreen msg="bgImage" v-bind:img= bgImage pageView="projects"  />
+      <BgImageFull msg="bgImage" v-bind:img= bgImage  />
       <HeaderBar msg="HeaderBar"
                  navMenu="projects"
                  v-bind:headerScrollType= "true"
                  v-bind:headerFixedType= "false"
-                 v-bind:headerStikyType= "false"
-      />
-      <BgImageFull msg="bgImage" v-bind:img= bgImage  />
+                 v-bind:headerStikyType= "false" />
       <projectsContent msg="projectsContent" pageView="projects"/>
+      <transition appear name="tScreen">
+        <TransitionScreen msg="bgImage" 
+          v-bind:img= bgImage 
+          v-if="page === 'projects'"
+        />
+      </transition>
   </div>
 </div>
 </template>
@@ -30,6 +34,11 @@ export default {
     HeaderBar,
     BgImageFull,
     TransitionScreen, 
+  },
+  computed: {
+    page () {
+    return this.$store.state.page;
+    },
   },
   data () {
     return {

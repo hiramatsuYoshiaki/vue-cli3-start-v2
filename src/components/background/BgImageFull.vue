@@ -1,17 +1,13 @@
 <template>
   <div class="bgImageFull">
-
     <transition name="bgTran" appear>
       <div class="bgImage" 
       :style="{ 'background-image': 'url(' + img + ') '  }">
         <div class="bg_filter"></div>
       </div>
     </transition> 
-
   </div>
 </template>
-
-
 <script>
  export default {
   name: 'BgImageFull',

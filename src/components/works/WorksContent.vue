@@ -218,7 +218,6 @@ export default {
     width: 100%;
     height: auto;
     padding-top: $header-height;
-    
 }
 main{
   margin: 0;

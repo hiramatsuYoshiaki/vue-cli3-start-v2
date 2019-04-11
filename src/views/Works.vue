@@ -1,15 +1,19 @@
 <template>
 <div class="works">
   <div class="worksWrap">
-      <TransitionScreen msg="bgImage" v-bind:img= bgImage pageView="works"  />
+      <BgImageFull msg="bgImage" v-bind:img= bgImage />
+      
       <HeaderBar msg="HeaderBar"
                  navMenu="works"
                  v-bind:headerScrollType= "true"
                  v-bind:headerFixedType= "false"
-                 v-bind:headerStikyType= "false"
-      />
-      <BgImageFull msg="bgImage" v-bind:img= bgImage />
+                 v-bind:headerStikyType= "false" />
       <WorksContent msg="WorksContent"/>
+      <transition appear name="tScreen">
+        <TransitionScreen msg="bgImage" 
+          v-bind:img= bgImage 
+          v-if="page === 'works'"  />
+      </transition>
   </div>
 </div>
 </template>
@@ -26,6 +30,11 @@ export default {
     HeaderBar,
     BgImageFull,
     TransitionScreen, 
+  },
+  computed: {
+    page () {
+    return this.$store.state.page;
+    },
   },
   data () {
     return {

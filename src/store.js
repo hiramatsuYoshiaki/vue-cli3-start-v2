@@ -16,6 +16,7 @@ export default new Vuex.Store({
     projects: state => { state.page = "projects"},
     about: state => { state.page = "about"},
     contact: state => { state.page = "contact"},
+    service: state => { state.page = "service"},
     // studio: state => { state.page = "studio"},
   },
   actions: {

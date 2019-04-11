@@ -63,6 +63,12 @@
               </a>
               <div class="menu_underline"></div>
             </div>
+            <div class="menu-item-box">
+              <a v-on:click="link_commit('service', '/service')" class="menu_link" v-bind:class="{ menu_item_visible: menuVisible === 'service' }">
+                SERVICE
+              </a>
+              <div class="menu_underline"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -109,6 +115,12 @@
                   </a>
                   <div class="menu_underline"></div>
                 </div>
+                <div class="menu-item-box">
+                  <a v-on:click="link_commit('service', '/service')" class="menu_link" >
+                    SERVICE
+                  </a>
+                  <div class="menu_underline"></div>
+                </div>
               </div>
             </div>
           </section>
@@ -150,7 +162,7 @@ export default {
   destroyed: function () {
     window.removeEventListener('scroll', this.handleScroll);
   },
- methods: {
+  methods: {
    handleScroll() {
       this.scrollY = window.scrollY;
       if(this.scrollY > 250){
@@ -411,10 +423,10 @@ export default {
   z-index: 101;
   top:0;
   left:0; 
-  width:100%;
-  height:100%;
-  // width:100vw;
-  // height:100vh;
+  // width:100%;
+  // height:100%;
+  width:100vw;
+  height:100vh;
 }
 .m-menu-wrap{
   position:relative;
