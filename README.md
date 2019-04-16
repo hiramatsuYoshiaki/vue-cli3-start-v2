@@ -59,5 +59,30 @@ mail to: hiramatsu3300@gmail.com
 # 注意事項 
 あくまでも確認用デモのレポジトリですので、実際の業務への使用はしないでください。
 
+# MEMO
+### Vue.jsのプロジェクトでGoogleAnalyticsの設置
 
+1. npm install vue-analytics —save 
 
+2. main.js
+
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
+import store from './store'
+import VueAnalytics from 'vue-analytics'
+
+import axios from 'axios'
+Vue.prototype.$axios = axios;
+Vue.config.productionTip = false;
+
+Vue.use(VueAnalytics, {
+  id: 'UA-35511262-2',
+  router
+})
+
+new Vue({
+  router,
+  store,
+  render: h => h(App)
+}).$mount('#app')
