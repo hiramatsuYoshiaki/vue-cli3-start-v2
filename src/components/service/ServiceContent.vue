@@ -44,6 +44,85 @@
                 <!-- <img :src="post.imgurlreq" alt="imageSrc"> -->
               <!-- </div> -->
             <!-- </div> -->
+            <p>postsデータ取得 </p>
+            <button @click="getPostsData">data load</button>
+            <div v-show="!isPosts">投稿未取得</div>
+            <div v-show="isPosts">投稿を取得しました。</div>
+            <!-- <div v-show="isPosts"> -->
+              <div v-show="isAxiosStatus">axios get ok</div>
+              <div v-show="!isAxiosStatus">axios wait</div>
+              <div>post:  {{postsData}}</div>
+            <!-- </div> -->
+           
+           
+            <br>
+            <br>
+            <p>axios データ取得 getData</p>
+            <button @click="getData">axios data load</button>
+            <div v-show="isLoading">データ未取得</div>
+            <div v-show="!isLoading">データを取得しました。</div>
+             <div>post:  {{postsData}}</div>
+             <div>getPosts:-----</div>
+             <div>{{getPosts}}</div>
+             <div>getPostsImgName:--------</div>
+             <div>{{getPostsImgName}}</div>
+             <div>getImagePreload:--------</div>
+             <div>{{getImagePreload}}</div>
+            
+            <br>
+            <br>
+            <p>データ保存とプリロード </p>
+            <button @click="loading">data stre</button>
+            <div>{{isLoading}}</div>
+            <br>
+            <br>
+            {{count}}
+            <div>
+              <p>ミューテーション </p>
+              <button @click="incriment">+</button>
+              <button @click="decriment">-</button>
+            </div>
+            <div>
+              <p>ミューテーション 第二引数</p>
+              <button @click="incriment10">+10</button>
+              <button @click="decriment10">-10</button>
+            </div>
+            <div>
+              <p>ミューテーション 第二引数(payload)</p>
+              <button @click="incrimentPayload">+payload</button>
+              <button @click="decrimentPayload">-payload</button>
+            </div>
+            <div>
+              <p>ミューテーション</p>
+              <button @click="actionIncriment">+</button>
+              <button @click="actionDecriment">-</button>
+            </div>
+            <!-- <button @click="incriment">+</button>
+            <button @click="decriment">-</button> -->
+            <div>
+              <p>アクション</p>
+              <button @click="actionIncriment">+</button>
+              <button @click="actionDecriment">-</button>
+            </div>
+            <div>
+              <p>同期アクション</p>
+              <button @click="actionIncrimentAsync">+</button>
+              <button @click="actionDecrimentAsync">-</button>
+            </div>
+            <div>
+              <p>actionA Promis同期アクション</p>
+              <button @click="actionIncrimentPromisA">+</button>
+            </div>
+            <div>
+              <p>actionB Promis同期アクション</p>
+              <button @click="actionIncrimentPromisB">+</button>
+            </div>
+            <div>
+              <p>actionB Promis同期アクション</p>
+              <button @click="actionIncrimentPromisB">+</button>
+            </div>
+          {{count}}
+
             <div v-if="isLoaded">
               <h1>loading now ......</h1>
             </div>
@@ -159,8 +238,33 @@ export default {
   },
   computed: {
     page () {
-    return this.$store.state.page
+      return this.$store.state.page
     },
+    count () {
+      return this.$store.state.count
+    },
+    isLoading () {
+      return this.$store.state.isLoading
+    },
+    isPosts () {
+      return this.$store.state.isPosts
+    },
+    isAxiosStatus () {
+      return this.$store.state.isAxiosStatus
+    },
+    postsData () {
+      return this.$store.state.postsData
+    },
+    getPosts () {
+      return this.$store.getters.getPosts
+    },
+    getPostsImgName () {
+      return this.$store.getters.getPostsImgName
+    },
+    getImagePreload () {
+      return this.$store.getters.getImagePreload
+    },
+    
   },
   created () {
     // console.log('create: ');
@@ -181,6 +285,126 @@ export default {
   },
   
   methods: {
+    getPostsData(){
+      
+      console.log('getposts');
+      this.$store.dispatch('getPosts',);
+    },
+    getData(){
+      console.log('getData');
+      // const url = "./json/posts.json";
+      this.$store.dispatch( 'getData'); 
+    },
+
+
+
+    incriment(){
+      this.$store.commit( 'increment' );
+      console.log('increment')
+    },
+    decriment(){
+      this.$store.commit( 'decrement' );
+      console.log('decrement')
+    },
+    incriment10(){
+      this.$store.commit( 'increment10', 10 );
+      console.log('increment10')
+    },
+    decriment10(){
+      this.$store.commit( 'decrement10', 10 );
+      console.log('decrement10')
+    },
+    incrimentPayload(){
+      this.$store.commit( 'incrementPayload', {
+        amount: 10
+      });
+      console.log('incrementPayload')
+    },
+    decrimentPayload(){
+      this.$store.commit( 'decrementPayload', {
+        amount: 10
+      });
+      console.log('decrementPayload')
+    },
+    actionIncriment(){
+      this.$store.dispatch( 'increment' );
+      console.log('dispatch increment')
+    },
+    actionDecriment(){
+      this.$store.dispatch( 'decrement' );
+      console.log('dispatch decrement')
+    },
+    
+    actionIncrimentAsync(){
+      // ペイロードを使ってディスパッチする
+      // this.$store.dispatch('incrementAsync', {
+      //   amount: 10
+      // })
+
+      // オブジェクトを使ってディスパッチする
+      this.$store.dispatch({
+        type: 'incrementAsync',
+        amount: 10
+      })
+      console.log('dispatch incrementAsync')
+    },
+    actionDecrimentAsync(){
+      // ペイロードを使ってディスパッチする
+      // this.$store.dispatch('decrementAsync', {
+      //   amount: 10
+      // })
+
+      // オブジェクトを使ってディスパッチする
+      this.$store.dispatch({
+        type: 'decrementAsync',
+        amount: 10
+      })
+      console.log('dispatch decrementAsync')
+    },
+
+    // promis ---------------------------
+    actionIncrimentPromisA(){
+      // ペイロードを使ってディスパッチする
+      // this.$store.dispatch('actionA', {
+      //   amount: 10
+      // })
+
+      // オブジェクトを使ってディスパッチする
+      this.$store.dispatch({
+        type: 'actionA',
+        amount: 10
+      })
+      console.log('dispatch actionA')
+    },
+    actionIncrimentPromisB(){
+      // ペイロードを使ってディスパッチする
+      // this.$store.dispatch('actionA', {
+      //   amount: 10
+      // })
+
+      // オブジェクトを使ってディスパッチする
+      this.$store.dispatch({
+        type: 'actionB',
+        amount: 10
+      })
+      console.log('dispatch actionB')
+    },
+    //loading
+    loading(){
+      // this.$store.dispatch( 'loading' );
+      // ペイロードを使ってディスパッチする
+      // this.$store.dispatch( 'loading' );
+
+      // オブジェクトを使ってディスパッチする
+      this.$store.dispatch({
+        type: 'loading',
+        isLoading: false
+      })
+      console.log('loading')
+    },
+    
+
+    
     
     handleScroll() {
       // console.log('handleScroll: ');

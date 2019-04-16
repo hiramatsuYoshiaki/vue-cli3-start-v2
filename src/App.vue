@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <!-- loding  -->
-    <div  v-if="isLoading">
+    <div  v-if="isPosts">
+    <!-- <div  v-if="isLoading"> -->
       <LoadingWrite />
     </div>
     <!-- transition  -->
@@ -9,7 +10,8 @@
       <TransitionScreen msg="bgImage" v-bind:img= bgImage pageView="loading"  />
     </div> -->
     <!-- contents  -->
-    <div  v-if="!isLoading">
+    <div  v-if="!isPosts">
+    <!-- <div  v-if="!isLoading"> -->
       <router-view /> 
     </div> 
   </div>
@@ -33,20 +35,116 @@
         // jsonUrl: require("./assets/json/posts.json"),
       }
     },
+    computed: {
+    page () {
+      return this.$store.state.page
+    },
+    isPosts () {
+      return this.$store.state.isPosts
+    },
+    postsData () {
+      return this.$store.state.postsData
+    },
+  },
     created() {
       //loading setting
-        console.log('loading axios');
+        console.log('create loading axios');
+        this.dataLoading();
+        
+
+        // const data1 = await f2(param);
+        // await this.async1();
+        // await this.fetchData();
+        
+        // await this.async2();
+        
+        // async function main() {
+        //    await this.async1();
+        //    await this.fetchData();
+        //    await this.async2();
+        // }
+
+
+
+
         // setTimeout(() => {
-          this.fetchData();
+          // this.fetchData();
           // this.isLoading = false;
         // }, 3000);
+
+        // let isStanby = true;
+        // async function main() {
+        //     const x = await getX()
+        //     const y = await getY()
+        //     console.log(x + y)
+        //     console.log('async3')
+        //     return false
+        // }
+
+        // async function getX() {
+        //   console.log('async1')
+        //     return 1
+        // }
+
+        // async function getY() {
+        //   console.log('async2')
+        //     return 2
+        // }
+
+        //  this.isStanby = main();
+        //  console.log('redy' + this.isStanby);
+        
+
+        
       
     },
+
+    //   main();
+        // async function main() {
+        //     const x = await getX()
+        //     const y = await getY()
+        //     console.log(x + y)
+        //     console.log('async3')
+        // }
+
+        // async function getX() {
+        //   console.log('async1')
+        //     return 1
+        // }
+
+        // async function getY() {
+        //   console.log('async2')
+        //     return 2
+        // }
+
+        // main()
+
+
+
+
     // mounted() {
     //   console.log('mounted');
     //   this.fetchData();
     // },
     methods: {
+      dataLoading(){
+          console.log('methods getData');
+          this.$store.dispatch( 'getData'); 
+      },
+      async1(){
+        setTimeout(() => {
+           console.log('async1')
+            return 1
+        }, 5000);
+          
+      },
+      async2(){
+           setTimeout(() => {
+           console.log('async2')
+            return 2
+        }, 2000);
+      },
+
       fetchData() {
         console.log('axios get data');
         // this.$axios.get('http://www.json-generator.com/api/json/get/ceUTuzoULC?indent=2').then(response => {
