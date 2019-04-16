@@ -18,6 +18,9 @@ Seamless Page Transitionは、シームレスなページ遷移を実装する�
 - ローディング画面 
 - カルーセル 
 - トランジション 
+- axios
+- preload
+
  
 ## 必要要件
  
@@ -31,7 +34,7 @@ Seamless Page Transitionは、シームレスなページ遷移を実装する�
 ## インストール
  
 $ md new-project 
-$ git clone https://github.com/hiramatsuYoshiaki/vue-cli3-page-transition.git 
+$ git clone https://github.com/hiramatsuYoshiaki/vue-cli3-start-v2.git 
 $ cd vue-cli3-unit-alprime 
 $ npm install 
  
