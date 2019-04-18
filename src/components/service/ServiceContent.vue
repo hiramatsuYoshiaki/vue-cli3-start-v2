@@ -44,6 +44,7 @@
                 <!-- <img :src="post.imgurlreq" alt="imageSrc"> -->
               <!-- </div> -->
             <!-- </div> -->
+            <h1>サービスコンテンツ</h1>
             <p>postsデータ取得 </p>
             <button @click="getPostsData">data load</button>
             <div v-show="!isPosts">投稿未取得</div>

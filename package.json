@@ -5,7 +5,13 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    
+    "dev-serve": "vue-cli-service serve --mode development",
+    "prod-serve": "vue-cli-service serve --mode prodcution",
+    
+    "dev-build": "vue-cli-service build --mode development",
+    "prod-build": "vue-cli-service build --mode prodcution"
   },
   "dependencies": {
     "vue": "^2.6.6",
